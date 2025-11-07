@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Låt stillheten omfamna dig på Nordic Calm Spa. Njut av varma bad, doftande bastur och avslappnande behandlingar - en harmonisk oas för kropp och själ.">
+    <meta name="keywords" content="spa, spaweekend, hotell, bastu, massage, relax, wellness, dagsspa, behandlingar, hälsa, rogivande, nordic calm spa">
+    <title>Nordic Calm Spa</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <!-- ==================== NAVIGATION ==================== -->
+    <header id="head">
+        <nav class="main-nav">
+            <input type="checkbox" id="menucheckbox">
+            <label for="menucheckbox" id="menuicon">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-close"></i>
+            </label>
+            <div class="nav-wrapper">
+                <ul class="nav-left">
+                    <li><a href="../index.html">Hem</a></li>
+                    <li><a href="../offers.html">Erbjudanden & Paket</a>
+                    </li>
+                    <li><a href="../spa.html">Spa & Relax</a>
+                        <ul class="local-nav-toggle">
+                            <li><a href="bath.html" class="active">Bad & Bastu</a></li>
+                            <li><a href="relax.html">Relaxavdelning</a></li>
+                            <li><a href="treatments.html" class="active">Behandlingar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a href="../index.html" class="logo-link">
+                    <img src="../img/logo.png" alt="Nordic Calm Spa logo" class="logo">
+                </a>
+                <ul class="nav-right">
+                    <li><a href="../hotel.html">Hotell</a>
+                    </li>
+                    <li><a href="../restaurant.html">Restaurang</a></li>
+                    <li><a href="../book.html">Boka nu</a></li>
+                </ul>
+            </div>
+            <nav class="local-nav">
+                <ul>
+                    <li><a href="bath.html">Bad & Bastu</a></li>
+                    <li><a href="relax.html">Relaxavdelning</a></li>
+                    <li><a href="treatments.html" class="active">Behandlingar</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <section class="hero hero-treatments">
+            <picture>
+                <!-- MOBILE VERSION -->
+                <source media="(max-width: 600px)" srcset="../img/card-treatments.jpeg">
+                <!-- DESKTOP VERSION -->
+                <source media="(min-width: 601px)" srcset="../img/hero-treatments-desktop.jpeg">
+                <!-- FALLBACK -->
+                <img src="../img/hero-treatments-desktop.jpeg" alt="Närbild på händer som droppar eterisk olja i ena handflatan.">
+            </picture>
+            <div class="hero-text">
+                <h1>Behandlingar</h1>
+                <p>Doft, beröring och värme samlas för att stimulera alla dina sinnen och låta kroppen sjunka in i ett fullständigt lugn. Varje behandling är noggrant utformad för att stilla sinnet och ge kroppen återhämtning.</p>
+                <a href="#book-treatment" class="btn">Boka din behandling</a>
+            </div>
+        </section>
+    
+
+        <section class="cta">
+            <h2 class="visually-hidden">Behandlingar</h2>
+            <a href="#body" class="btn">Massage & kroppsbehandlingar</a>
+            <a href="#face" class="btn">Ansiktsbehandlingar</a>
+        </section>
+
+        <section class="highlights" id="body">
+            <h2>Massage & kroppsbehandlingar</h2>
+            <div class="cards treatments">
+                <article>
+                    <h3>Body & Face Ritual</h3>
+                    <p>En helhetsupplevelse för kropp och själ som väcker huden till liv och låter lugnet ta över.</p>
+                    <ul class="including">
+                        <li>Kroppspeeling & mjukgörande massage</li>
+                        <li>Värmande inpackning</li>
+                        <li>Ansiktsrengöring, mask & hårbottenmassage</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>90 min<br>1 295 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Calm Release</h3>
+                    <p>En djupavslappnande antistressmassage som löser upp spänningar och stillar tankarna.</p>
+                    <ul class="including">
+                        <li>Nacke-, ansikts- & hårbottenmassage</li>
+                        <li>Djupgående klassisk ryggmassage</li>
+                        <li>Lugnande aromaoljor</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>60 min<br>995 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Duo Harmony</h3>
+                    <p>En upplevelse för två där värme, stillhet och beröring skapar total balans.</p>
+                    <ul class="including">
+                        <li>Varmt kurbad & klassisk massage</li>
+                        <li>Behandling i duo-rum</li>
+                        <li>Växelvis upplevelse – båda får allt</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>90 min<br>1 095 SEK / person</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Mother's Touch</h3>
+                    <p>En varsam och trygg gravidritual som lindrar spänningar och vårdar huden.</p>
+                    <ul class="including">
+                        <li>Kropps- & ryggmassage</li>
+                        <li>Fot- och benskrubb med inpackning</li>
+                        <li>Ansiktsrengöring, mask & handmassage</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>90 min<br>1 395 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Aroma Balance</h3>
+                    <p>Helkroppsmassage med skräddarsydda aromoljor som lugnar sinnet och återställer balans.</p>
+                    <ul class="including">
+                        <li>Aromaterapeutisk helkroppsmassage</li>
+                        <li>Ansikts- & hårbottenmassage</li>
+                        <li>Personligt vald doftprofil</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>60 min<br>1 095 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Hot Stone Harmony</h3>
+                    <p>Värmen från lena lavastenar löser upp spänningar och skapar djup muskelavslappning.</p>
+                    <ul class="including">
+                        <li>Varm stenmassage över hela kroppen</li>
+                        <li>Massage med aromaolja</li>
+                        <li>Avslappnande avslut för nacke & rygg</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>60 / 90 min<br>1 095 / 1 495 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Deep Recovery</h3>
+                    <p>En kraftfull idrottsmassage som återställer rörlighet och löser upp djupt liggande spänningar</p>
+                    <ul class="including">
+                        <li>Varmt kurbad & klassisk massage</li>
+                        <li>Behandling i duo-rum</li>
+                        <li>Växelvis upplevelse – båda får allt</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>45 / 60 min<br>795 / 995 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Klassisk Helkroppsmassage</h3>
+                    <p>Avslappnande massage över hela kroppen med klassiska tekniker.</p>
+                    <div class="price-booking">
+                        <p>60 / 90 min<br>995 / 1 295 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Rygg- & nackmassage</h3>
+                    <p>Massage av rygg och nacke som minskar spänningar och stress.</p>
+                    <div class="price-booking">
+                        <p>30 / 45 min<br>495 / 695 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Grön Spa Ritual</h3>
+                    <p>Kroppskrubb, inpackning och avslappnande massage med ekologiska oljor. Avslutas med ansiktsmassage.</p>
+                    <div class="price-booking">
+                        <p>75 min<br>1 295 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Fot & Ben Retreat</h3>
+                    <p>Peeling, inpackning och massage av fötter och underben för trötta muskler. </p>
+                    <div class="price-booking">
+                        <p>30 / 45 min<br>495 / 695 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Ansikts- & skalpmassage</h3>
+                    <p>Djuprengöring, peeling, mask och massage av ansikte samt hårbotten. Perfekt komplement till kroppsmassage.</p>
+                    <div class="price-booking">
+                        <p>30 min<br>595 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <section class="highlights" id="face">
+            <h2>Ansiktsbehandlingar</h2>
+            <div class="cards treatments">
+                <article>
+                    <h3>Nordic Glow</h3>
+                    <p>Ge huden ny lyster med en djuprengörande och återfuktande behandling. Peeling, mask och massage återställer balans och ger ett friskt glow.</p>
+                    <ul class="including">
+                        <li>Rengöring & peeling</li>
+                        <li>Återfuktande mask</li>
+                        <li>Ansikts- och skalpmassage</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>60 min<br>995 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Pure Calm</h3>
+                    <p>En behandling för stressad och känslig hud. Lugnande och mjuka rörelser minskar rodnad och ger omedelbar komfort.</p>
+                    <ul class="including">
+                        <li>Mild rengöring och svalkande mask</li>
+                        <li>Lätt ansiktsmassage</li>
+                        <li>Avslutande skyddande creme</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>50 min<br>945 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Deep Detox</h3>
+                    <p>Rengör på djupet och återställ klarheten. Perfekt för kombinerad eller fet hud.</p>
+                    <ul class="including">
+                        <li>Djuprengörande peeling & ånga</li>
+                        <li>Portömning vid behov</li>
+                        <li>Lermask & balanserande serum</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>70 min<br>1 095 SEK / person</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Hydra Boost</h3>
+                    <p>För dig med torr eller trött hud. Intensivt återfuktande behandling med serum och massage som återställer spänst och lyster.</p>
+                    <ul class="including">
+                        <li>Enzympeeling</li>
+                        <li>Fuktmask & serum</li>
+                        <li>Ansikts-, nack- & dekolletagemassage</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>75 min<br>1 195 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Timeless Beauty</h3>
+                    <p>En anti-age behandling som stärker, lyfter och ger huden ny energi.</p>
+                    <ul class="including">
+                        <li>Dubbelrengöring & exfoliering</li>
+                        <li>Lifting mask & närande serum</li>
+                        <li>Ansikts-, hals- och skalpmassage</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>75 min<br>1 295 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Arctic Ritual</h3>
+                    <p>En lyxig signaturbehandling inspirerad av nordisk natur. Kombinationen av mineralrik lermask, varma handdukar och aromaolja ger total återhämtning.</p>
+                    <ul class="including">
+                        <li>Rengöring & peeling</li>
+                        <li>Mineralmask med handmassage</li>
+                        <li>Avslappnande ansikts- och hårbottenmassage</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>80 min<br>1 395 SEK</p>
+                        <a href="#book-treatment">Boka här</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="treatment-form" id="book-treatment">
+            <div class="booking">
+                <h2>Boka behandling</h2>
+                <p class="form-note">Vi bekräftar din bokning via e-post inom 24 timmar.</p>
+                <form name="treatment" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="booking">
+                    <p hidden>
+                        <label>Fyll inte i detta fält om du är människa:
+                            <input name="bot-field"></label>
+                    </p>
+                    <div class="guest-details">
+                        <div class="name">
+                            <label for="name">Namn:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="email">
+                            <label for="email">E-post:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="phone">
+                            <label for="phone">Telefon (valfritt):</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="date">
+                            <label for="date">Önskat datum:</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+                    </div>
+                    <div class="treatment">
+                        <label for="treatment">Välj behandling:</label>
+                        <select name="treatment" id="treatment">
+                            <option value="" selected>Välj ett alternativ</option>
+                            <optgroup label="Massage & kroppsbehandlingar">
+                                <option>Ansikts- & skalpmassage, 30 min</option>
+                                <option>Antistress Treatment, 60 min</option>
+                                <option>Aromaterapi Antistress, 60 min</option>
+                                <option>Body & Face Ritual, 90 min</option>
+                                <option>Duo Deluxe, 90 min</option>
+                                <option>Fot & Ben Retreat, 30 min</option>
+                                <option>Fot & Ben Retreat, 45 min</option>
+                                <option>Gravid Ritual, 90 min</option>
+                                <option>Grön Spa Ritual, 75 min</option>
+                                <option>Hot Stone Massage, 60 min</option>
+                                <option>Hot Stone Massage, 90 min</option>
+                                <option>Idrottsmassage, 45 min</option>
+                                <option>Idrottsmassage, 60 min</option>
+                                <option>Klassisk Helkroppsmassage, 60 min</option>
+                                <option>Klassisk Helkroppsmassage, 90 min</option>
+                                <option>Rygg- & nackmassage, 30 min</option>
+                                <option>Rygg- & nackmassage, 45 min</option>
+                            </optgroup>
+                            <optgroup label="Ansiktsbehandling">
+                                <option>Arctic Ritual</option>
+                                <option>Deep Detox</option>
+                                <option>Hydra Boost</option>
+                                <option>Nordic Glow</option>
+                                <option>Pure Calm</option>
+                                <option>Timeless Beauty</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="message">
+                        <label for="message">Meddelande:</label>
+                        <textarea name="message" id="message" rows="6" maxlength="500" placeholder="Max. 500 tecken"></textarea>
+                    </div>
+                    <button type="submit" class="btn" id="submit">Skicka</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+          <footer>
+        <div class="footer-content">
+            <div class="footer-navigation">
+                <h3>Snabblänkar</h3>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="offers.html">Erbjudanden / Paket</a></li>
+                    <li><a href="spa.html">Spa & Relax</a></li>
+                    <li><a href="hotel.html">Hotell</a></li>
+                    <li><a href="restaurant.html">Restaurang</a></li>
+                    <li><a href="book.html">Boka nu</a></li>
+                    <li><a href="../contact.html">Kontakt & FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h3>Kontakta oss</h3>
+                <p>Telefon: 0647-123 34</p>
+                <p>E-post: info@nordiccalmspa.se</p>
+                <p>Adress: Tallgläntan 3, 791 92 Falun</p>
+                <div class="socials">
+                <a href="https://www.facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+            </div>
+                <p><strong>Öppettider</strong></p>
+                <p>Hotell/reception: 06:00–00:00</p>
+                <p>Spa & Relax: 07:00–22:00</p>
+            </div>
+            <div class="news-letter">
+                <h3>Nyhetsbrev</h3>
+                <p><strong>Ta del av aktuella erbjudanden, inspiration och nyheter från Nordic Calm Spa. Ange din e-postadress för att hålla dig uppdaterad.</strong></p>
+                <p>Du kan när som helst avsluta din prenumeration via länken i våra utskick.</p>
+                <form class="sign-up">
+                    <input type="email" placeholder="Din e-post">
+                    <button type="submit" class="btn-small">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-end">
+        © 2025 Nordic Calm Spa
+    </div>
+        <div class="transition">
+            <a href="rapport/rapport.html" target="_blank">Projektrapport</a>
+      
+    </div>
+    </footer>
+</body>
+
+</html>

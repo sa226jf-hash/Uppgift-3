@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport för uppgift 3 i Webbteknik 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            background-color: #ddd7d0;
+            color: #2e2b27;
+            font-family: 'Noto Sans', sans-serif;
+            max-width: 80ch;
+            margin: 2rem auto;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .wrapper {
+            background-color: #eae6e1;
+            padding: 2rem;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+        }
+
+        header,
+        section {
+            border-bottom: 1px solid #5a554e;
+            padding: 1rem 0 1rem;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        p {
+            text-align: justify;
+            margin: 1rem 0;
+        }
+
+        p:last-of-type {
+            text-align: left;
+        }
+
+        a {
+            color: #000;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: clamp(2rem, 3vw, 5rem);
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            margin-bottom: 0.2em;
+            font-size: clamp(1.8rem, 2vw, 3rem);
+            border-left: 4px solid #848879;
+            padding-left: 0.5rem;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+            color: #5a554e;
+        }
+
+        ul {
+            padding-left: 1rem;
+        }
+
+        ul.req li {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+
+        ul.req li::before {
+            content: "✔ ";
+        }
+
+        #go-back {
+            display: inline-block;
+            font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+            margin-top: 2rem;
+            color: #4c5042;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Rapport för uppgift 3</h1>
+        </header>
+        <main>
+            <section id="purpose">
+                <h2>1. Syfte och målgrupp</h2>
+                <p>I uppgiften skapades en webbplats för det påhittade företaget <strong>Nordic Calm Spa</strong>, ett modernt spa med fokus på återhämtning, balans och välbefinnande. Webbplatsen ska representera spaets verksamhet och göra det enkelt för kunder att ta del av information, se utbudet, boka sin vistelse och behandlingar.
+                </p>
+                <p>Syfte med webbplatsen är att:</p>
+                <ul class="req">
+                    <li>presentera behandlingar och paket på ett tydligt och inspirerande sätt.</li>
+                    <li>skapa en känsla av lugn och professionalism genom design och bildval.</li>
+                    <li>göra det lätt för användaren att hitta information och boka.</li>
+                    <li>bygga förtroende för varumärket genom tydlig struktur och språk.</li>
+                </ul>
+                
+                <p>Målgruppen består av vuxna i åldern 25–55, både kvinnor och män, som söker avkoppling, stresshantering eller vardagslyx. Webbplatsen riktar sig även till företag som erbjuder friskvård eller personalaktiviteter.
+                </p>
+                <h3>Användarnas behov</h3>
+                <ul class="req">
+                    <li>Snabb överblick över behandlingar och priser.</li>
+                    <li>Enkla kontakt- och bokningsmöjligheter.</li>
+                    <li>Information om öppettider och plats.</li>
+                    <li>Bilder och text som skapar lugn och förtroende.</li>
+                    <li>Responsiv design som fungerar på mobil.</li>
+                </ul>
+            </section>
+            <section id="demands">
+                <h2>2. Kravspecifikation</h2>
+                <h3>Innehåll</h3>
+                <p>Webbplatsen ska:</p>
+                <ul class="req">
+                    <li>innehålla en startsida med introduktion till Nordic Calm Spa och dess atmosfär.</li>
+                    <li>presentera information om behandlingar, paket och priser.</li>
+                    <li>innehålla en sida/sektion riktad till företag om friskvård och personalaktiviteter.</li>
+                    <li>innehålla kontaktinformation samt ett kontaktformulär.</li>
+                    <li>innehålla minst en bild per sida som förstärker innehållets budskap.</li>
+                    <li>vara skriven på svenska och spegla en lugn, professionell och harmonisk ton.</li>
+                </ul>
+                <h3>Funktion</h3>
+                <p>Användaren ska:</p>
+                <ul class="req">
+                    <li>kunna navigera mellan webbplatsens sidor via en meny i sidhuvudet.</li>
+                    <li>kunna klicka på knappar och länkar för att läsa mer, boka eller ta kontakt.</li>
+                    <li>kunna skicka meddelande via ett kontaktformulär.</li>
+                    <li>kunna nå kontaktsektionen direkt via en knapp i hero-området.</li>
+                </ul>
+                <p>Webbplatsen ska:</p>
+                <ul class="req">
+                    <li>vara responsiv och fungera på dator, surfplatta och mobil.</li>
+                    <li>ha hovring på knappar och länkar som visuellt indikerar interaktivitet.</li>
+                </ul>
+            </section>
+            <section id="description">
+                <h2>3. Beskrivning av arbetet</h2>
+                <h3>Strategy Plane</h3>
+                <p>
+                Arbetet har genomförts enligt Garrets modell för användarcentrerad design (Garret, 2011). Jag inledde processen med <em>Strategy Plane</em> (s. 36–42), där jag identifierade webbplatsens syfte och målgrupper. Webbplatsen riktar sig främst till privatpersoner som söker lugn och återhämtning, samt företag som vill erbjuda friskvård eller personalaktiviteter. Jag definierade även användarnas behov och förväntningar, för att säkerställa att webbplatsen innehåll och funktioner svarar mot dessa mål.</p>
+                <h3>Scope Plane</h3>
+                <p>Därefter arbetade jag med <em>Scope Plane</em> (s. 58–69), där jag tog fram en kravspecifikation som tydliggjorde vilka funktioner och innehåll webbplatsen skulle ha. Fokus låg på tydlig struktur, enkel navigering och att skapa en känsla av lugn genom både design och innehåll.</p>
+                <h3>Structure Plane</h3>
+                <p>I nästa steg arbetade jag med <em>Structure Plane</em> (s. 89–91), där jag organiserade innehållet logiskt och skapade en tydlig informationsarkitektur. Jag planerade navigationsstrukturen och kombinerade global och lokal navigering så att användaren enkelt kan hitta mellan de olika sidorna utan onödiga klick eller förvirring. Strukturen bygger på en hierarkiskt system med startsidan "Hem" som utgångspunkt och tydliga undersidor för "Erbjudanden & paket", "Spa & relax" - "Bad & bastu", "Relaxavdelning" och "Behandlingar", "Hotell", "Restaurang" och "Boka nu". I sidfoten finns den globala navigeringen, projektrapporten samt sidan för kontakt & FAQ tillgänglig.</p>
+                <ul>
+                    <li>Hem</li>
+                    <li>Erbjudanden & paket</li>
+                    <li>Spa & relax
+                        <ul>
+                            <li>Bad & bastu</li>
+                            <li>Relaxavdelning</li>
+                            <li>Behandlingar</li>
+                        </ul>
+                    </li>
+                    <li>Hotell</li>
+                    <li>Restaurang</li>
+                    <li>Boka nu</li>
+                </ul>
+                <h3>Skeleton Plane</h3>
+                <p>Under <em>Skeleton Plane</em> (s. 114) arbetade jag med layout, placering av element och visuell hierarki. Här fokuserade jag på att skapa balans mellan text, bilder och tomrum för att uppnå tydlighet och harmoni. Navigationen med tydliga sidlänkar och indikationer placerades konsekvent högst upp på sidan och samma layoutmall återanvändes på flera undersidor för att stärka igenkänning (s. 118–122).</p>
+                <h3>Surface Plane</h3>
+                <p>Slutligen utformades det visuella gränssnittet enligt <em>Surface Plane</em> (s. 136–137). Designen inspirerades av spa-miljöer, med lugna färger, mycket utrymme och harmoniska bilder. Jag testade olika färgkombinationer, typsnitt och bildval för att skapa en visuell identitet som förmedlar stillhet och professionalitet (s. 146–147). Jag ville även hålla allt innehåll så enhetligt som möjligt (s. 141). Webbplatsen byggdes i HTML och CSS och gjordes responsiv för att fungera väl på både dator, surfplatta och i mobil. En ny sektion riktad till företag lades till för att visa möjligheter till friskvård och personalaktivitet, samt bredda målgruppen och tydliggöra verksamhetens erbjudande.</p>
+                <br>
+                <p>Sammanfattningsvis har Garretts modell gett en tydlig struktur för hela processen – från mål och innehål till design och färdig webbplats.</p>
+            </section>
+            <section id="images">
+                <h2>4. Bilder</h2>
+                <p>Bilder är en viktig del av webbplatsens design och bidrar till att skapa rätt atmosfär och känsla. Jag har valt bilder som förmedlar lugn, harmoni och välbefinnande, i linje med spaets varumärke och målgruppens förväntningar. Loggan har jag gjort själv och bilderna har jag hämtat från:</p>
+                <ul>
+                    <li><a href="https://unsplash.com/">Unsplash</a></li>
+                    <li><a href="https://pixabay.com/sv/">Pixabay</a></li>
+                </ul>
+                <p>Bilderna har redigerats i GIMP, där följande justeringar har gjorts för att anpassa dem till webbplatsens stil och format:</p>
+                <ul>
+                    <li>Samtliga bilder har skalats ner för att minska filstorlek och förbättra laddningstid.</li>
+                    <li>Några bilder, huvudsakligen hero-bilder, har beskurits för att passa layouten.</li>
+                    <li>Funktionen <strong>färglägg</strong> har använts för att ge bilderna en mer enhetlig ton som matchar webbplatsen färgskala.</li>
+                    <li>I vissa fall har skärpan ökats och brusreducering använts för att minska blur.</li>
+                </ul>
+                <p><code>&lt;picture&gt;</code>-elementet används på startsidan för hero-bilden, på sidan spa & relax för hero-bilden, på sidan hotell för hero-bilden och på sidan restaurang för hero-bilden där olika bildstorlekar laddas beroende på användarens skärmstorlek för bättre prestanda och anpassning.</p>
+            </section>
+            <section id="evaluation">
+                <h2>5. Utvärdering mot kravspecifikationen</h2>
+                <h3>Innehåll</h3>
+                <p>Webbplatsen ska:</p>
+                <ul class="req">
+                    <li>innehålla en startsida med introduktion till Nordic Calm Spa och dess atmosfär – <strong>uppfyllt</strong>. Text och bild samspelar väl och förmedlar rätt känsla.</li>
+                    <li>presentera information om behandlingar, paket och priser – <strong>uppfyllt</strong>. Webbplatsen innehåller tydliga beskrivningar och prisinformation är lätt att hitta.</li>
+                    <li>innehålla en sida/sektion riktad till företag om friskvård och personalaktiviteter – <strong>uppfyllt</strong>. En sida riktad till företag har lagts till med innehåll anpassat för denna målgrupp.</li>
+                    <li>innehålla kontaktinformation samt ett kontaktformulär – <strong>uppfyllt</strong>. Kontaktinformation finns i footer på samtliga sidor, och kontaktformuläret nås både via cta-knappar och länk i sidfoten.</li>
+                    <li>innehålla minst en bild per sida som förstärker innehållets budskap – <strong>uppfyllt</strong>. Samtliga sidor innehåller minst en bild som stödjer textens syfte.</li>
+                    <li>vara skriven på svenska och spegla en lugn, professionell och harmonisk ton – <strong>uppfyllt</strong>. All text är på svenska och har utformats för att spegla varumärkets värden och känsla.</li>
+                </ul>
+                <h3>Funktion</h3>
+                <p>Användaren ska:</p>
+                <ul class="req">
+                    <li>kunna navigera mellan webbplatsens sidor via en meny i sidhuvudet – <strong>uppfyllt</strong>. Navigationsmenyn är konsekvent placerad högst upp och förblir synlig även vid scrollning. De viktigaste länkarna återfinns även i footern.</li>
+                    <li>kunna klicka på knappar och länkar för att läsa mer, boka eller ta kontakt – <strong>delvis uppfyllt</strong>. Webbplatsen innehåller flera knappar och länkar till olika sidor, exempelvis behandlingar och paket samt kontaktformulär för frågor och bokning. Däremot saknas särskilda 'läs mer'-länkar.</li>
+                    <li>kunna skicka meddelande via ett kontaktformulär – <strong>uppfyllt</strong>. På sidan "Boka nu" finns ett formulär där användaren kan fylla i sina uppgifter, önskat datum, vad den vill boka och även skriva ett meddelande. Det finns även formulär för att boka hotellrum, bord på restaurangen eller en behandling.</li>
+                    <li>kunna nå kontaktsektionen direkt via en knapp i hero-området – <strong>delvis uppfyllt</strong>. De sidor som har hero-sektion innehåller en knapp som leder till sidan <em>kontakt & bokning</em>.</li>
+                </ul>
+                <p>Webbplatsen ska:</p>
+                <ul class="req">
+                    <li>vara responsiv och fungera på dator, surfplatta och mobil – <strong>uppfyllt</strong>. Layouten anpassar sig väl till olika skärmstorlekar.</li>
+                    <li>ha hovring på knappar och länkar som visuellt indikerar interaktivitet – <strong>uppfyllt</strong>. Hovring ger visuella förändringar som stärker användarupplevelsen och tydliggör klickbara element.</li>
+                </ul>
+                <p>Sammanfattningsvis uppfyller webbplatsen samtliga krav som definierats i kravspecifikationen.</p>
+            </section>
+            <section id="user-test">
+                <h2>6. Användartest</h2>
+                <h3>- med metoden "Tänka högt" (Thinking Out Loud)</h3>
+                <!-- Endast för VG. Har du inte utfört användartest, tar du bort detta avsnitt (hela section-elementet). -->
+                <!-- Beskriv hur du genomförde användartestet. Ange vilka brister du upptäckte och hur du åtgärdat dem. -->
+                <p>...</p>
+            </section>
+            <section id="references">
+                <h2>Källförteckning</h2>
+                <ul>
+                    <li><em>Garrett, JJ. (2011)</em>. The elements of User Experience: User-Centered Design for the Web and Beyond. 2nd ed. Berkeley, CA: New Riders.</li>
+                    <li>Bildkällor: <a href="https://unsplash.com/">Unsplash</a> och <a href="https://pixabay.com/sv/">Pixabay</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

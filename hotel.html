@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Låt stillheten omfamna dig på Nordic Calm Spa. Njut av varma bad, doftande bastur och avslappnande behandlingar - en harmonisk oas för kropp och själ.">
+    <meta name="keywords" content="spa, spaweekend, hotell, bastu, massage, relax, wellness, dagsspa, behandlingar, hälsa, rogivande, nordic calm spa">
+    <title>Nordic Calm Spa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body id="hotel">
+    <!-- ==================== NAVIGATION ==================== -->
+    <header id="head">
+        <nav class="main-nav">
+            <input type="checkbox" id="menucheckbox">
+            <label for="menucheckbox" id="menuicon">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-close"></i>
+            </label>
+            <div class="nav-wrapper">
+                <ul class="nav-left">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="offers.html">Erbjudanden & Paket</a>
+                    </li>
+                    <li><a href="spa.html">Spa & Relax</a>
+                        <ul class="local-nav-toggle">
+                            <li><a href="spa/bath.html">Bad & Bastu</a></li>
+                            <li><a href="spa/relax.html">Relaxavdelning</a></li>
+                            <li><a href="spa/treatments.html">Behandlingar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a href="index.html" class="logo-link">
+                    <img src="img/logo.png" alt="Nordic Calm Spa logo" class="logo">
+                </a>
+                <ul class="nav-right">
+                    <li><a href="hotel.html" class="active">Hotell</a>
+                    </li>
+                    <li><a href="restaurant.html">Restaurang</a></li>
+                    <li><a href="book.html">Boka nu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <section class="hero hero-hotel">
+            <picture>
+                <!-- MOBILE VERSION -->
+                <source media="(max-width: 600px)" srcset="img/card-hotel.jpeg">
+                <!-- DESKTOP VERSION -->
+                <source media="(min-width: 601px)" srcset="img/hero-hotel-desktop.jpeg">
+                <!-- FALLBACK -->
+                <img src="img/hero-hotel-desktop.jpeg" alt="En hotellobby med dov belysning och mjuka färger. En fotölj i läder är i fokus.">
+            </picture>
+            <div class="hero-text">
+                <h1>Nordic Calm Hotel</h1>
+                <p>Vakna upp till doften av tallskog och ljudet av stilla vatten. Våra rum är designade för lugn, harmoni och återhämtning – med naturen som närmaste granne.</p>
+                <a href="#book-hotel" class="btn">Boka din vistelse idag</a>
+            </div>
+        </section>
+
+        <section class="intro">
+            <h2 tabindex="0">En plats för vila</h2>
+            <p>Rummen på Nordic Calm Hotel är enhetligt inredda med naturmaterial, dämpade toner och utsikt över skog eller sjö.</p>
+        </section>
+        <section class="highlights hotel">
+            <h2 class="visually-hidden">Våra rum</h2>
+            <div class="cards room">
+                <article class="room">
+                    <img src="img/card-standard.jpeg" alt="Närbild på en bäddad hotellsäng med sänggavel i naturträ">
+                    <h3>Standard</h3>
+                    <p>Våra stilrena standardrum erbjuder en avslappnad atmosfär och allt du behöver för en rofylld vistelse.</p>
+                </article>
+                <article class="room">
+                    <img src="img/card-deluxe.jpeg" alt="En bäddad hotellsäng, ett badkar och stora glaspartier med skog utanför i bakgrunden">
+                    <h3>Deluxe</h3>
+
+                    <p>Ett rymligt rum med badkar, skogsutsikt och en inredning inspirerad av skandinavisk enkelhet och elegans.</p>
+                </article>
+                <article class="room">
+                    <img src="img/card-suite.jpeg" alt="Ett hotellrum utifrån sett med nordiska träd i förgrunden. I bakgrunden, innanför glasväggar syns ett badkar och en säng.">
+                    <h3>Suite</h3>
+                    <p>Vår mest exklusiva upplevelse – generösa ytor, jacuzzi på rummet och privat bastu med panoramavy över vattnet.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Vill du boka ett paket eller en behandling?</h2>
+            <p>Utforska våra spapaket och behandlingar, och skicka din bokningsförfrågan via sidan.</p>
+            <a href="spa.html" class="btn">Till Nordic Calm Spa</a>
+        </section>
+
+        <section class="hotel-form" id="book-hotel">
+            <div class="booking">
+                <h2>Nordic Calm Hotel
+                    <br>
+                    Bokningsförfrågan</h2>
+                <p class="form-note">Vi bekräftar din bokning via e-post inom 24 timmar.</p>
+                <form name="hotel" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p hidden>
+                        <label>Fyll inte i detta fält om du är människa:
+                            <input name="bot-field"></label>
+                    </p>
+                    <div class="guest-details">
+                        <div class="name">
+                            <label for="name">Namn:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="email">
+                            <label for="email">E-post:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="phone">
+                            <label for="phone">Telefon (valfritt):</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="room">
+                            <label for="room">Rum:</label>
+                            <select name="room" id="room">
+                                <option value="" disabled selected>Välj ett alternativ</option>
+                                <option>Standard</option>
+                                <option>Deluxe</option>
+                                <option>Suite</option>
+                            </select>
+                        </div>
+
+                        <div class="date">
+                            <label for="arriving">Ankomstdatum:</label>
+                            <input type="date" id="arriving" name="arriving">
+                        </div>
+
+                        <div class="date">
+                            <label for="leaving">Avresedatum:</label>
+                            <input type="date" id="leaving" name="leaving">
+                        </div>
+                    </div>
+
+                    <div class="subject">
+                        <label id="subject-heading">Vill du lägga till något i din bokning?</label>
+                        <input type="radio" id="radio-treatment" name="type" value="treatment">
+                        <label for="radio-treatment">Behandling</label>
+
+                        <input type="radio" id="radio-package" name="type" value="package">
+                        <label for="radio-package">Paket</label>
+
+                        <div class="form-section treatment">
+                            <label for="treatment" id="treatment-heading">Välj behandling:</label>
+                            <select name="treatment">
+                                <option value="" selected>Välj ett alternativ</option>
+
+                                <optgroup label="Massage & kroppsbehandlingar">
+                                    <option>Ansikts- & skalpmassage, 30 min</option>
+                                    <option>Antistress Treatment, 60 min</option>
+                                    <option>Aromaterapi Antistress, 60 min</option>
+                                    <option>Body & Face Ritual, 90 min</option>
+                                    <option>Duo Deluxe, 90 min</option>
+                                    <option>Fot & Ben Retreat, 30 min</option>
+                                    <option>Fot & Ben Retreat, 45 min</option>
+                                    <option>Gravid Ritual, 90 min</option>
+                                    <option>Grön Spa Ritual, 75 min</option>
+                                    <option>Hot Stone Massage, 60 min</option>
+                                    <option>Hot Stone Massage, 90 min</option>
+                                    <option>Idrottsmassage, 45 min</option>
+                                    <option>Idrottsmassage, 60 min</option>
+                                    <option>Klassisk Helkroppsmassage, 60 min</option>
+                                    <option>Klassisk Helkroppsmassage, 90 min</option>
+                                    <option>Rygg- & nackmassage, 30 min</option>
+                                    <option>Rygg- & nackmassage, 45 min</option>
+                                </optgroup>
+
+                                <optgroup label="Ansiktsbehandling">
+                                    <option>Arctic Ritual</option>
+                                    <option>Deep Detox</option>
+                                    <option>Hydra Boost</option>
+                                    <option>Nordic Glow</option>
+                                    <option>Pure Calm</option>
+                                    <option>Timeless Beauty</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="form-section package">
+                            <label for="package" id="package-heading">Välj paket:</label>
+
+                            <select name="package">
+                                <option value="" selected>Välj ett alternativ</option>
+
+                                <optgroup label="Dagspaket">
+                                    <option>Morning Glow</option>
+                                    <option>Lunch Break</option>
+                                    <option>Evening Serenity</option>
+                                    <option>After Work Spa</option>
+                                </optgroup>
+
+                                <optgroup label="Boendepaket">
+                                    <option>Sunday Reset</option>
+                                    <option>Calm Spa Weekend</option>
+                                    <option>Nordic Silence</option>
+                                    <option>Harmony for Two</option>
+                                    <option>Spa & Retreat Deluxe</option>
+
+                                </optgroup>
+                                <optgroup label="För företag">
+                                    <option>Dagspaket</option>
+                                    <option>Konferens & Spa</option>
+                                    <option>Teambuilding</option>
+                                    <option>Eget önskemål</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="message">
+                        <label for="message">Övriga önskemål:</label>
+                        <textarea name="message" id="message" rows="6" maxlength="500" placeholder="Max. 500 tecken"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn" id="submit">Skicka</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+           <footer>
+        <div class="footer-content">
+            <div class="footer-navigation">
+                <h3>Snabblänkar</h3>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="offers.html">Erbjudanden / Paket</a></li>
+                    <li><a href="spa.html">Spa & Relax</a></li>
+                    <li><a href="hotel.html" class="active">Hotell</a></li>
+                    <li><a href="restaurant.html">Restaurang</a></li>
+                    <li><a href="book.html">Boka nu</a></li>
+                    <li><a href="contact.html">Kontakt & FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h3>Kontakta oss</h3>
+                <p>Telefon: 0647-123 34</p>
+                <p>E-post: info@nordiccalmspa.se</p>
+                <p>Adress: Tallgläntan 3, 791 92 Falun</p>
+                <div class="socials">
+                <a href="https://www.facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+            </div>
+                <p><strong>Öppettider</strong></p>
+                <p>Hotell/reception: 06:00–00:00</p>
+                <p>Spa & Relax: 07:00–22:00</p>
+            </div>
+            <div class="news-letter">
+                <h3>Nyhetsbrev</h3>
+                <p><strong>Ta del av aktuella erbjudanden, inspiration och nyheter från Nordic Calm Spa. Ange din e-postadress för att hålla dig uppdaterad.</strong></p>
+                <p>Du kan när som helst avsluta din prenumeration via länken i våra utskick.</p>
+                <form class="sign-up">
+                    <input type="email" placeholder="Din e-post">
+                    <button type="submit" class="btn-small">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-end">
+        © 2025 Nordic Calm Spa
+    </div>
+        <div class="transition">
+            <a href="rapport/rapport.html" target="_blank">Projektrapport</a>
+      
+    </div>
+    </footer>
+</body>
+
+</html>

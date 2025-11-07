@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Låt stillheten omfamna dig på Nordic Calm Spa. Njut av varma bad, doftande bastur och avslappnande behandlingar - en harmonisk oas för kropp och själ.">
+    <meta name="keywords" content="spa, spaweekend, hotell, bastu, massage, relax, wellness, dagsspa, behandlingar, hälsa, rogivande, nordic calm spa">
+    <title>Nordic Calm Spa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body id="contact">
+    <!-- ==================== NAVIGATION ==================== -->
+    <header id="head">
+        <nav class="main-nav">
+            <input type="checkbox" id="menucheckbox">
+            <label for="menucheckbox" id="menuicon">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-close"></i>
+            </label>
+            <div class="nav-wrapper">
+                <ul class="nav-left">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="offers.html">Erbjudanden & Paket</a>
+                    </li>
+                    <li><a href="spa.html">Spa & Relax</a>
+                        <ul class="local-nav-toggle">
+                            <li><a href="spa/bath.html">Bad & Bastu</a></li>
+                            <li><a href="spa/relax.html">Relaxavdelning</a></li>
+                            <li><a href="spa/treatments.html">Behandlingar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a href="index.html" class="logo-link">
+                    <img src="img/logo.png" alt="Nordic Calm Spa logo" class="logo">
+                </a>
+                <ul class="nav-right">
+                    <li><a href="hotel.html">Hotell</a>
+                    </li>
+                    <li><a href="restaurant.html">Restaurang</a></li>
+                    <li><a href="book.html">Boka nu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <section class="contact-form">
+            <div class="contact">
+                <h2>Kontaktformulär</h2>
+                <p class="form-note">Om du inte hittar svaret på din fråga bland <strong>"<a href="#faq">Vanliga frågor</a>"</strong> nedanför, skicka ett meddelande.</p>
+                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p hidden>
+                        <label>Fyll inte i detta fält om du är människa:
+                            <input name="bot-field"></label>
+                    </p>
+                    <div class="contact-details">
+                        <div class="name">
+                            <label for="name">Namn:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="email">
+                            <label for="email">E-post:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="phone">
+                            <label for="phone">Telefon (valfritt):</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="contact-message">
+                            <label for="message">Meddelande:</label>
+                            <textarea name="message" id="message" rows="10" maxlength="1000" placeholder="Max. 1000 tecken" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" id="submit">Skicka
+                        </button>
+                </form>
+            </div>
+        </section>
+        <section class="faq section" id="faq">
+            <div class="faq-container">
+                <h2>Vanliga frågor</h2>
+                <details>
+                    <summary>Hur bokar jag en behandling?</summary>
+                    <p>Du kan boka behandling direkt via vårt bokningsformulär under "<a href="book.html">Boka nu</a>". Fyll dina uppgifter och önskat datum, så återkommer vi med bekräftelse.</p>
+                </details>
+
+                <details>
+                    <summary>Kan jag boka flera personer samtidigt?</summary>
+                    <p>Ja, det går bra! Ange antal personer och eventuella önskemål i meddelandefältet vid bokning, så försöker vi ordna platser tillsammans.</p>
+                </details>
+
+                <details>
+                    <summary>Finns det åldersgräns på spaet?</summary>
+                    <p>Vårt spa och relaxavdelning är avsedd för gäster över 16 år.</p>
+                </details>
+
+                <details>
+                    <summary>Kan jag avboka eller ändra min tid?</summary>
+                    <p>Ja, avbokning eller ändring kan göras senast 24 timmar före din bokade tid utan kostnad. Vid senare avbokning debiteras 50&nbsp;% av priset.</p>
+                </details>
+
+                <details>
+                    <summary>Behöver jag ta med mig något till min behandling?</summary>
+                    <p>Nej, vi står för handdukar, badrock och tofflor. Det enda du behöver ta med är ett öppet sinne och en stund för dig själv.</p>
+                </details>
+
+                <details>
+                    <summary>Erbjuder ni gravidmassage?</summary>
+                    <p>Ja, vi erbjuder anpassade behandlingar för gravida från vecka 13. Våra terapeuter har särskild utbildning för detta.</p>
+                </details>
+
+                <details>
+                    <summary>Kan jag komma bara för att spaa?</summary>
+                    <p>Absolut! Du kan boka enbart spaentré utan behandling. Perfekt för en lugn stund med bastu, bubbel och avslappning.</p>
+                </details>
+
+                <details>
+                    <summary>Finns det badkläder att låna?</summary>
+                    <p>Vi rekommenderar att du tar med egna badkläder, men vi har även ett mindre utbud till försäljning vid receptionen.</p>
+                </details>
+
+                <details>
+                    <summary>Har ni presentkort?</summary>
+                    <p>Ja, men i dagsläget går det endast att köpa presentkort på plats.</p>
+                </details>
+
+                <details>
+                    <summary>Vilka betalningsmetoder accepterar ni?</summary>
+                    <p>Vi tar emot kort, Swish och presentkort. Kontanter accepteras inte.</p>
+                </details>
+
+
+                <details>
+                    <summary>Vad händer om jag kommer för sent?</summary>
+                    <p>Om du blir sen kan din behandling behöva kortas ner för att nästa gäst ska få sin tid som planerat.</p>
+                </details>
+
+
+                <details>
+                    <summary>Finns det parkering?</summary>
+                    <p>Ja, vi har gratis parkering precis utanför.</p>
+                </details>
+
+
+                <details>
+                    <summary>Kan jag köpa era produkter?</summary>
+                    <p>Ja, vi säljer alla våra produkter som används i våra behandlingar. Du kan köpa dem på plats.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-navigation">
+                <h3>Snabblänkar</h3>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="offers.html">Erbjudanden / Paket</a></li>
+                    <li><a href="spa.html">Spa & Relax</a></li>
+                    <li><a href="hotel.html">Hotell</a></li>
+                    <li><a href="restaurant.html">Restaurang</a></li>
+                    <li><a href="book.html">Boka nu</a></li>
+                    <li><a href="#contact" class="active">Kontakt & FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h3>Kontakta oss</h3>
+                <p>Telefon: 0647-123 34</p>
+                <p>E-post: info@nordiccalmspa.se</p>
+                <p>Adress: Tallgläntan 3, 791 92 Falun</p>
+                <div class="socials">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <p><strong>Öppettider</strong></p>
+                <p>Hotell/reception: 06:00–00:00</p>
+                <p>Spa & Relax: 07:00–22:00</p>
+            </div>
+            <div class="news-letter">
+                <h3>Nyhetsbrev</h3>
+                <p><strong>Ta del av aktuella erbjudanden, inspiration och nyheter från Nordic Calm Spa. Ange din e-postadress för att hålla dig uppdaterad.</strong></p>
+                <p>Du kan när som helst avsluta din prenumeration via länken i våra utskick.</p>
+                <form class="sign-up">
+                    <input type="email" placeholder="Din e-post">
+                    <button type="submit" class="btn-small">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-end">
+            © 2025 Nordic Calm Spa
+        </div>
+        <div class="transition">
+            <a href="rapport/rapport.html" target="_blank">Projektrapport</a>
+
+        </div>
+    </footer>
+</body>
+
+</html>

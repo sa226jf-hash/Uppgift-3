@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Låt stillheten omfamna dig på Nordic Calm Spa. Njut av varma bad, doftande bastur och avslappnande behandlingar - en harmonisk oas för kropp och själ.">
+    <meta name="keywords" content="spa, spaweekend, hotell, bastu, massage, relax, wellness, dagsspa, behandlingar, hälsa, rogivande, nordic calm spa">
+    <title>Nordic Calm Spa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <!-- ==================== NAVIGATION ==================== -->
+    <header id="head">
+        <nav class="main-nav">
+            <input type="checkbox" id="menucheckbox">
+            <label for="menucheckbox" id="menuicon">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-close"></i>
+            </label>
+            <div class="nav-wrapper">
+                <ul class="nav-left">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="offers.html">Erbjudanden & Paket</a>
+                    </li>
+                    <li><a href="spa.html">Spa & Relax</a>
+                        <ul class="local-nav-toggle">
+                            <li><a href="spa/bath.html">Bad & Bastu</a></li>
+                            <li><a href="spa/relax.html">Relaxavdelning</a></li>
+                            <li><a href="spa/treatments.html">Behandlingar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a href="index.html" class="logo-link">
+                    <img src="img/logo.png" alt="Nordic Calm Spa logo" class="logo">
+                </a>
+                <ul class="nav-right">
+                    <li><a href="hotel.html">Hotell</a>
+                    </li>
+                    <li><a href="restaurant.html" class="active">Restaurang</a></li>
+                    <li><a href="book.html">Boka nu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+
+ <section class="hero hero-restaurant">
+            <picture>
+                <!-- MOBILE VERSION -->
+                <source media="(max-width: 600px)" srcset="img/card-restaurant.jpeg">
+                <!-- DESKTOP VERSION -->
+                <source media="(min-width: 601px)" srcset="img/hero-restaurant-desktop.jpeg">
+                <!-- FALLBACK -->
+                <img src="img/hero-restaurant-desktop.jpeg" alt="En restaurang inredd med naturnära färger och material.">
+            </picture>
+            <div class="hero-text">
+            <h1>Nordic Calm Restaurant</h1>
+            <p>Mat som balanserar kropp och sinne. Vårt kök inspireras av nordiska råvaror och rena smaker – tillagat med omtanke och säsongens bästa ingredienser.</p>
+            <a href="#book-restaurant" class="btn">Boka bord</a>
+            </div>
+        </section>
+
+        <section class="intro">
+            <h2>Mat med omtanke</h2>
+            <p>Vi lagar allt från grunden med lokalproducerade råvaror. Menyn varierar efter säsong, och varje rätt är skapad för att ge balans och energi – både smakmässigt och näringsmässigt.</p>
+        </section>
+
+        <section class="highlights restaurant">
+            <h2></h2>
+            <div class="cards food">
+                <article class="dish">
+                    <img src="img/card-breakfast.jpeg" alt="En del av en frukostbuffé med bröd, mjölk och pålägg.">
+                </article>
+                <article class="dish">
+                    <img src="img/card-lunch.jpeg" alt="Några tallrikar fyllda med mat.">
+                </article>
+                <article class="dish">
+                    <img src="img/card-dinner.jpeg" alt="En tallrik med fin uppläggning av kött och p.">
+                </article>
+            </div>
+        </section>
+
+        <section class="cta restaurant">
+            <h2>En upplevelse för alla sinnen</h2>
+            <p>Låt doftrena, smakerna och atmosfären föra dig närmare naturen – och dig själv.</p>
+            <a href="menu/menu.html" target="_blank" class="btn">Utforska vår meny</a>
+        </section>
+
+        <section class="table-form" id="book-restaurant">
+            <div class="booking">
+                <h2>Nordic Calm Restaurang
+                    <br>
+                    Boka bord</h2>
+                <p class="form-note">Vi bekräftar din bokning via e-post inom 24 timmar.</p>
+                <form name="table" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="booking">
+                    <p hidden>
+                        <label>Fyll inte i detta fält om du är människa:
+                            <input name="bot-field"></label>
+                    </p>
+                    <div class="guest-details">
+                        <div class="name">
+                            <label for="name">Namn:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="email">
+                            <label for="email">E-post:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="phone">
+                            <label for="phone">Telefon (valfritt):</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="guests">
+                            <label for="guests">Antal personer:</label>
+                            <input type="number" id="guests" name="guests" min="1" max="12" required>
+                        </div>
+                    </div>
+                    <div class="guest-info">
+                        <div class="date-time">
+                            <div class="date">
+                                <label for="date">Datum:</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="time">
+                                <label for="time">Tid:</label>
+                                <select id="time" name="time">
+                                    <optgroup label="Frukost">
+                                        <option>06:00</option>
+                                        <option>06:30</option>
+                                        <option>07:00</option>
+                                        <option>07:30</option>
+                                        <option>08:00</option>
+                                        <option>08:30</option>
+                                        <option>09:00</option>
+                                        <option>09:30</option>
+                                        <option>10:00</option>
+                                    </optgroup>
+                                    <optgroup label="Lunch">
+                                        <option>11:00</option>
+                                        <option>11:30</option>
+                                        <option>12:00</option>
+                                        <option>12:30</option>
+                                        <option>13:00</option>
+                                        <option>13:30</option>
+                                        <option>14:00</option>
+                                    </optgroup>
+                                    <optgroup label="Middag">
+                                        <option>16:00</option>
+                                        <option>16:30</option>
+                                        <option>17:00</option>
+                                        <option>17:30</option>
+                                        <option>18:00</option>
+                                        <option>17:30</option>
+                                        <option>18:00</option>
+                                        <option>18:30</option>
+                                        <option>19:00</option>
+                                        <option>19:30</option>
+                                        <option>20:00</option>
+                                        <option>20:30</option>
+                                        <option>21:00</option>
+                                        <option>21:30</option>
+                                        <option>22:00</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <label for="message">Övriga önskemål:</label>
+                        <textarea name="message" id="message" rows="6" maxlength="500" placeholder="Ex. allergier, sittplatser, specialkost"></textarea>
+                    </div>
+
+                    <button type="submit" id="submit" class="btn">Skicka</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+         <footer>
+        <div class="footer-content">
+            <div class="footer-navigation">
+                <h3>Snabblänkar</h3>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="offers.html">Erbjudanden / Paket</a></li>
+                    <li><a href="spa.html">Spa & Relax</a></li>
+                    <li><a href="hotel.html">Hotell</a></li>
+                    <li><a href="restaurant.html" class="active">Restaurang</a></li>
+                    <li><a href="book.html">Boka nu</a></li>
+                    <li><a href="contact.html">Kontakt & FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h3>Kontakta oss</h3>
+                <p>Telefon: 0647-123 34</p>
+                <p>E-post: info@nordiccalmspa.se</p>
+                <p>Adress: Tallgläntan 3, 791 92 Falun</p>
+                <div class="socials">
+                <a href="https://www.facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+            </div>
+                <p><strong>Öppettider</strong></p>
+                <p>Hotell/reception: 06:00–00:00</p>
+                <p>Spa & Relax: 07:00–22:00</p>
+            </div>
+            <div class="news-letter">
+                <h3>Nyhetsbrev</h3>
+                <p><strong>Ta del av aktuella erbjudanden, inspiration och nyheter från Nordic Calm Spa. Ange din e-postadress för att hålla dig uppdaterad.</strong></p>
+                <p>Du kan när som helst avsluta din prenumeration via länken i våra utskick.</p>
+                <form class="sign-up">
+                    <input type="email" placeholder="Din e-post">
+                    <button type="submit" class="btn-small">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-end">
+        © 2025 Nordic Calm Spa
+    </div>
+        <div class="transition">
+            <a href="rapport/rapport.html" target="_blank">Projektrapport</a>
+      
+    </div>
+    </footer>
+</body>
+
+</html>

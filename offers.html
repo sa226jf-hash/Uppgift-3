@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Låt stillheten omfamna dig på Nordic Calm Spa. Njut av varma bad, doftande bastur och avslappnande behandlingar - en harmonisk oas för kropp och själ.">
+    <meta name="keywords" content="spa, spaweekend, hotell, bastu, massage, relax, wellness, dagsspa, behandlingar, hälsa, rogivande, nordic calm spa">
+    <title>Nordic Calm Spa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <!-- ==================== NAVIGATION ==================== -->
+    <header id="head">
+        <nav class="main-nav">
+            <input type="checkbox" id="menucheckbox">
+            <label for="menucheckbox" id="menuicon">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-close"></i>
+            </label>
+            <div class="nav-wrapper">
+                <ul class="nav-left">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="offers.html" class="active">Erbjudanden & Paket</a>
+                    </li>
+                    <li><a href="spa.html">Spa & Relax</a>
+                        <ul class="local-nav-toggle">
+                        <li><a href="spa/bath.html">Bad & Bastu</a></li>
+                    <li><a href="spa/relax.html">Relaxavdelning</a></li>
+                    <li><a href="spa/treatments.html">Behandlingar</a></li>
+                </ul>
+            </li>
+                </ul>
+
+                <a href="index.html" class="logo-link">
+                    <img src="img/logo.png" alt="Nordic Calm Spa logo" class="logo">
+                </a>
+                <ul class="nav-right">
+                    <li><a href="hotel.html">Hotell</a>
+                    </li>
+                    <li><a href="restaurant.html">Restaurang</a></li>
+                    <li><a href="book.html">Boka nu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+
+        <section class="hero hero-offers">
+            <picture>
+                <!-- MOBILE VERSION -->
+                <source media="(max-width: 600px)" srcset="img/card-offers.jpeg">
+                <!-- DESKTOP VERSION -->
+                <source media="(min-width: 601px)" srcset="img/hero-offers-desktop.jpeg">
+                <!-- FALLBACK -->
+                <img src="img/hero-offers-desktop.jpeg" alt="En kvinna sitter i en bastu, i bakgrunden syns en man i ofokus.">
+            </picture>
+            <div class="hero-text">
+                <h1>Erbjudanden & paket</h1>
+                <p>
+                    <a href="#popular" class="btn">Våra mest bokade paket</a>
+                    <a href="#offers" class="btn">Aktuella erbjudanden</a>
+                    <br>
+                    <a href="#day" class="btn-small">Spa utan övernattning</a>
+                    <a href="#stay" class="btn-small">Spa med övernattning</a>
+                    <a href="#corp" class="btn-small">För företag</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="highlights" id="popular">
+            <h2>Våra mest bokade paket</h2>
+            <div class="cards popular">
+                <article>
+                    <div class="img-wrapper">
+                        <a href="#harmony-for-two">
+                            <img src="img/card-harmony-for-two.jpeg" alt="En brasa, ett bord med chark och vin. I förgrunden skymtas ett par i ofokus på var sida av bilden.">
+                            <div class="text-overlay">
+                                <h3>Harmony for Two</h3>
+                                <p>Romantik för två – vårt mest uppskattade paket.</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="img-wrapper">
+                        <a href="#evening-serenity">
+                            <img src="img/card-evening-serenity.jpeg" alt="En tallrik med mat som ställs fram på ett bord.">
+                            <div class="text-overlay">
+                                <h3>Evening Serenity</h3>
+                                <p>Spa, middag och stillhet i kvällsljus..</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                <article>
+                    <div class="img-wrapper">
+                        <a href="#calm-spa-weekend">
+                            <img src="img/card-calm-spa-weekend.jpeg" alt="En kvinna bakifrån som sitter i en pool med armbågarna upp på kanten.">
+                            <div class="text-overlay">
+                                <h3>Calm Spa Weekend</h3>
+                                <p>Två dagar av total ro och njutning.</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="highlights" id="offers">
+            <h2>Aktuella erbjudanden</h2>
+            <div class="cards offers">
+                <article id="offers-now">
+                    <div class="img-wrapper">
+                        <img src="img/card-sunday-reset.jpeg" alt="En kvinna som ligger på magen i en säng med fluffiga, vita sängklder.">
+                        <img src="img/2-for-1.png" alt="En ring med texten 2 för 1 inuti." class="stamp">
+                        <div class="text-overlay">
+                            <h3>Sunday Reset – 2 för 1</h3>
+                            <p>Låt söndagen bli din dag för återhämtning.</p>
+                        </div>
+                    </div>
+                    <ul class="including">
+                        <li>Kom 2, betala för 1</li>
+                        <li>En övernattning med frukostbuffé</li>
+                        <li>Tillgång till spa kl. 15:00–19:00</li>
+                        <li>Kvällste och snacks i relaxen</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>Från 1 195 SEK / 2 personer</p>
+                        <a href="book.html">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="img-wrapper">
+                        <img src="img/card-mindful-detox.jpeg" alt="Ett glas med grön smoothie omgivet av kiwi och bladspenat.">
+                        <div class="text-overlay">
+                            <h3>Mindful Detox</h3>
+                            <p>Förnya hud och själ med vårt detoxpaket som ger både energi och glow.</p>
+                        </div>
+                    </div>
+                    <ul class="including">
+                        <li>30 min kroppsskrubb</li>
+                        <li>45 min massage med eteriska oljor</li>
+                        <li>Detox-smoothie</li>
+                        <li>Tillgång till spa kl. 10:00–14:00</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>Från 1 195 SEK / person</p>
+                        <a href="book.html">Boka här</a>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="img-wrapper">
+                        <img src="img/card-spa-sip.jpeg" alt="Ett glas med bubbel som hälls upp.">
+                        <div class="text-overlay">
+                        <h3>Spa & Sip</h3>
+                        <p>Unna dig en eftermiddag med bubbel och spa. Perfekt för kompisgäng eller par som vill fira något litet, eller bara skämma bort sig själva.</p>
+                        </div>
+                    </div>
+                    <ul class="including">
+                        <li>En flaska mousserande / 2 personer</li>
+                        <li>Fruktbricka</li>
+                        <li>Tillgång till spa kl. 16:00–20:00</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>Från 795 SEK / person</p>
+                        <a href="book.html">Boka här</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="highlights" id="day">
+            <h2>Spa utan övernattning</h2>
+            <div class="cards packages">
+
+                <article id="morning-glow">
+                    <img src="img/card-morning-glow.jpeg" alt="Ett glas juice omringat med vinbär och jordgubbar.">
+                    <h3>Morning Glow</h3>
+                    <p>Starta dagen med stillhet. Njut av vår lyxiga frukostbuffé fylld med färska råvaror, juicer och nybakat bröd.</p>
+                    <ul class="including">
+                        <li>Frukostbuffé</li>
+                        <li>Tillgång till spa kl. 07:00–11:00</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>Från 895 SEK / person</p>
+                        <a href="book.html">Boka här</a>
+                    </div>
+                </article>
+
+                <article id="lunch-break">
+                    <img src="img/card-lunch-break.jpeg" alt="Två tallrikar med mat och två glas med smoothie/milkshake/iskaffe.">
+                    <h3>Lunch Break</h3>
+                    <p>En harmonisk paus mitt på dagen. Koppla av i spaets rogivande miljö och njut av en vällagad lunch med fokus på lokala råvaror och rena smaker.</p>
+                    <ul class="including">
+                        <li>Lunch</li>
+                        <li>Tillgång till spa kl. 10:00–14:00</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>Från 995 SEK / person</p>
+                        <a href="book.html">Boka här</a>
+                    </div>
+                </article>
+
+                <article id="evening-serenity">
+                    <img src="img/card-evening-serenity.jpeg" alt="En tallrik med mat som ställs fram på ett bord.">
+                    <h3>Evening Serenity</h3>
+                    <p>Avsluta dagen i harmoni. Varva ner i varma bad och bastur, och njut av en tvårätters middag innan eller efter ditt spabesök. En perfekt balans mellan njutning och ro.</p>
+                    <ul class="including">
+                        <li>Tvårätters middag</li>
+                        <li>Tillgång till spa kl. 15:00–19:00</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>Från 1 195 SEK / person</p>
+                        <a href="book.html">Boka här</a>
+                    </div>
+                </article>
+
+                <article id="after-work-spa">
+                    <img src="img/card-after-work-spa.jpeg" alt="Händer som håller i drinkar och skålar.">
+                    <h3>After Work Spa</h3>
+                    <p>Perfekt för kollegor eller vänner som vill avrunda veckan med något extra. </p>
+                    <ul class="including">
+                        <li>TIllgång till spa kl. 18:00–22:00</li>
+                        <li>Tapas och ett glas bubbel</li>
+                        <li>Valfri drink från vår drinkmeny</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>Från 1 195 SEK / person</p>
+                        <a href="book.html">Boka här</a>
+                    </div>
+                </article>
+
+                                <article id="spa-entrance">
+                    <img src="img/card-spa-entrance.jpeg" alt="En modern bastu i trä, med ett stenfyllt aggregat i centrum.">
+                    <h3>Spaentré</h3>
+                    <p>För dig som endast vill njuta av spa- och relaxavdelningen – koppla av i varma bad, bastu och relaxytor, och låt stillheten omsluta dig för en stund.</p>
+                    <ul class="including">
+                        <li>Tillgång till 4 timmars spa</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>Från 595 SEK / person</p>
+                        <a href="book.html">Boka här</a>
+                    </div>
+                </article>
+            </div>
+            <p class="sidenote">* Lån av badrock, tofflor och handduk ingår i alla paket.</p>
+        </section>
+
+        <section class="highlights" id="stay">
+            <h2>Spa med övernattning</h2>
+            <div class="cards packages">
+                <article id="sunday-reset">
+                    <img src="img/card-sunday-reset.jpeg" alt="En kvinna som ligger på magen i en säng med fluffiga, vita sängklder.">
+                    <h3>Sunday Reset</h3>
+                    <p>När veckan har gått i ett – låt söndagen bli din dag för återhämtning. Känn lugnet i spaets stilla atmosfär och få en god natts sömn innan vardagen börjar om.</p>
+                    <ul class="including">
+                        <li>En övernattning med frukostbuffé</li>
+                        <li>Tillgång till 5 timmars spa</li>
+                        <li>Kvällste och snacks i relaxen</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>Från 1 195 SEK / person</p>
+                        <a href="book.html">Boka här</a>
+                    </div>
+                </article>
+
+                <article id="calm-spa-weekend">
+                    <img src="img/card-calm-spa-weekend.jpeg" alt="En kvinna bakifrån som sitter i en pool med armbågarna upp på kanten.">
+                    <h3>Calm Spa Weekend</h3>
+                    <p>En helg för kropp och själ. Checka in på torsdag eller fredag, släpp taget om veckan och låt oss ta hand om resten. Två dagar fyllda med avkoppling, god mat och ro för både kropp och sinne.</p>
+                    <ul class="including">
+                        <li>Två övernattningar med frukostbuffé</li>
+                        <li>Tillgång till 4 timmars spa båda dagarna</li>
+                        <li>Trerättersmiddag och lunch</li>
+                        <li>Basritual med nordiska örter</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>Från 2 195 SEK / person</p>
+                        <a href="book.html">Boka här</a>
+                    </div>
+                </article>
+
+                <article id="nordic-silence">
+                    <img src="img/card-nordic-silence.jpeg" alt="En trappa ner i en blå pool med glaspartier. I bakgrunden syns mer vatten och svaga solstrålar.">
+                    <h3>Nordic Silence</h3>
+                    <p>Perfekt för dig som vill komma bort ett dygn och bara andas. Koppla bort omvärlden, njut av stillheten i spaet avsluta dagen med en välsmakande middag. Ett dygn i total harmoni.</p>
+                    <ul class="including">
+                        <li>En övernattning med frukostbuffé</li>
+                        <li>Tillgång till spa kl. 16:00–21:00</li>
+                        <li>En tvårätters middag</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>Från 1 595 SEK / person</p>
+                        <a href="book.html">Boka här</a>
+                    </div>
+                </article>
+
+                <article id="harmony-for-two">
+                    <img src="img/card-harmony-for-two.jpeg" alt="En brasa, ett bord med chark och vin. I förgrunden skymtas ett par i ofokus på var sida av bilden.">
+                    <h3>Harmony for Two</h3>
+                    <p>För två som vill koppla bort omvärlden och hitta lugnet tillsammans. Unna er tid för varandra och njut av spa, parbehandling och en trerätters middag.</p>
+                    <ul class="including">
+                        <li>En övernattning med frukostbuffé</li>
+                        <li>Mousserande vin och praliner på rummet</li>
+                        <li>En trerätters middag</li>
+                        <li>Tillgång till spa hela dagen</li>
+                        <li>Valfri 60-minuters parbehandling</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>Från 2 295 SEK / person</p>
+                        <a href="book.html">Boka här</a>
+                    </div>
+                </article>
+
+                <article id="spa-treatment-deluxe">
+                    <img src="img/card-spa-treatment-deluxe.jpeg" alt="En kvinna som får ansiktsmassage.">
+                    <h3>Spa & Treatment Deluxe</h3>
+                    <p>Ett paket för dig som söker total återhämtning. Njut av spaets stilla miljö, en 60-minuters behandling och en välsmakande middag som ger både kropp och sinne ny energi.</p>
+                    <ul class="including">
+                        <li>En övernattning med frukostbuffé</li>
+                        <li>En tvårätters middag</li>
+                        <li>Tillgång till spa hela dagen</li>
+                        <li>En valfri 60-minuters behandling</li>
+                    </ul>
+                    <div class="price-booking">
+                        <p>Från 1 995 SEK / person</p>
+                        <a href="book.html">Boka här</a>
+                    </div>
+                </article>
+
+            </div>
+            <p class="sidenote">* Lån av badrock, tofflor och handduk ingår i alla paket.</p>
+        </section>
+        <div class="transition">
+            <p>
+                För dig som representerar ett företag
+            </p>
+        </div>
+        <section class="intro" id="corp">
+            <h2>Företag</h2>
+            <h3>Ta hand om ditt team</h3>
+            <p>Ge ditt team en paus från vardagens tempo. På Nordic Calm Spa erbjuder vi avkopplade upplevelser för företag – allt från en paus med avslappnande behandlingar till weekends för att ge optimala förutsättningar till återhämtning.</p>
+            <p>Låt era medarbetare fylla på med ny energi, inspiration och gemenskap i en rogivande miljö.</p>
+            <br>
+            <p><em>Vi erbjuder både färdiga paket och skräddarsydda paket utifrån era önskemål.</em></p>
+        </section>
+
+        <section class="cta">
+            <h2 class="visually-hidden">Begär offert</h2>
+            <p>Kontakta oss för offert eller förslag på upplägg anpassat för ert företag.</p>
+            <a href="contact.html" class="btn">Begär offert</a>
+        </section>
+
+        <section class="highlights">
+            <h2>Våra företagsupplägg</h2>
+            <div class="cards">
+                <article>
+                    <h3>Dagspaket</h3>
+                    <p>En halv- eller heldag med tillgång till spa, lunchbuffé och tid för återhämtning.</p>
+                </article>
+                <article>
+                    <h3>Konferens & Spa</h3>
+                    <p>Kombinera inspirerande möten i en harmonisk miljö med avslappning i våra varma källor.</p>
+                </article>
+                <article>
+                    <h3>Teambuilding</h3>
+                    <p>Yoga, mindfulness och gruppbehandlingar som stärker gemenskap och välmående.</p>
+                </article>
+            </div>
+        </section>
+        <section class="cta">
+            <p>Vi hjälper er gärna att skapa något unikt för ert företag och skräddarsy ett upplägg.</p>
+            <h2>Vill du veta mer?</h2>
+            <a href="contact.html" class="btn">Skicka ett meddelande</a>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+          <footer>
+        <div class="footer-content">
+            <div class="footer-navigation">
+                <h3>Snabblänkar</h3>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="offers.html" class="active">Erbjudanden / Paket</a></li>
+                    <li><a href="spa.html">Spa & Relax</a></li>
+                    <li><a href="hotel.html">Hotell</a></li>
+                    <li><a href="restaurant.html">Restaurang</a></li>
+                    <li><a href="book.html">Boka nu</a></li>
+                    <li><a href="contact.html">Kontakt & FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h3>Kontakta oss</h3>
+                <p>Telefon: 0647-123 34</p>
+                <p>E-post: info@nordiccalmspa.se</p>
+                <p>Adress: Tallgläntan 3, 791 92 Falun</p>
+                <div class="socials">
+                <a href="https://www.facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+            </div>
+                <p><strong>Öppettider</strong></p>
+                <p>Hotell/reception: 06:00–00:00</p>
+                <p>Spa & Relax: 07:00–22:00</p>
+            </div>
+            <div class="news-letter">
+                <h3>Nyhetsbrev</h3>
+                <p><strong>Ta del av aktuella erbjudanden, inspiration och nyheter från Nordic Calm Spa. Ange din e-postadress för att hålla dig uppdaterad.</strong></p>
+                <p>Du kan när som helst avsluta din prenumeration via länken i våra utskick.</p>
+                <form class="sign-up">
+                    <input type="email" placeholder="Din e-post">
+                    <button type="submit" class="btn-small">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-end">
+        © 2025 Nordic Calm Spa
+    </div>
+        <div class="transition">
+            <a href="rapport/rapport.html" target="_blank">Projektrapport</a>
+      
+    </div>
+    </footer>
+</body>
+
+</html>
