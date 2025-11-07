@@ -80,17 +80,39 @@
             color: #5a554e;
         }
 
+
         ul {
             padding-left: 1rem;
         }
 
-        ul.req li {
-            list-style: none;
+        li {
+            margin-bottom: 1rem;
+        }
+        ul.req,
+        ul.check {
+            padding: 0;
             margin-top: 0.5rem;
+            list-style: none;
         }
 
+        ul.req li,
+        ul.check li {
+            position: relative;
+            padding-left: 1.5em;
+            list-style: none;
+        }
+
+        ul.req li::before,
+        ul.check li::before {
+            position: absolute;
+            left: 0;
+        }
         ul.req li::before {
-            content: "✔ ";
+            content: '☐ ';
+        }
+
+        ul.check li::before {
+            content: '☑ ';
         }
 
         #go-back {
@@ -119,7 +141,7 @@
                     <li>göra det lätt för användaren att hitta information och boka.</li>
                     <li>bygga förtroende för varumärket genom tydlig struktur och språk.</li>
                 </ul>
-                
+
                 <p>Målgruppen består av vuxna i åldern 25–55, både kvinnor och män, som söker avkoppling, stresshantering eller vardagslyx. Webbplatsen riktar sig även till företag som erbjuder friskvård eller personalaktiviteter.
                 </p>
                 <h3>Användarnas behov</h3>
@@ -161,7 +183,7 @@
                 <h2>3. Beskrivning av arbetet</h2>
                 <h3>Strategy Plane</h3>
                 <p>
-                Arbetet har genomförts enligt Garrets modell för användarcentrerad design (Garret, 2011). Jag inledde processen med <em>Strategy Plane</em> (s. 36–42), där jag identifierade webbplatsens syfte och målgrupper. Webbplatsen riktar sig främst till privatpersoner som söker lugn och återhämtning, samt företag som vill erbjuda friskvård eller personalaktiviteter. Jag definierade även användarnas behov och förväntningar, för att säkerställa att webbplatsen innehåll och funktioner svarar mot dessa mål.</p>
+                    Arbetet har genomförts enligt Garrets modell för användarcentrerad design (Garret, 2011). Jag inledde processen med <em>Strategy Plane</em> (s. 36–42), där jag identifierade webbplatsens syfte och målgrupper. Webbplatsen riktar sig främst till privatpersoner som söker lugn och återhämtning, samt företag som vill erbjuda friskvård eller personalaktiviteter. Jag definierade även användarnas behov och förväntningar, för att säkerställa att webbplatsen innehåll och funktioner svarar mot dessa mål.</p>
                 <h3>Scope Plane</h3>
                 <p>Därefter arbetade jag med <em>Scope Plane</em> (s. 58–69), där jag tog fram en kravspecifikation som tydliggjorde vilka funktioner och innehåll webbplatsen skulle ha. Fokus låg på tydlig struktur, enkel navigering och att skapa en känsla av lugn genom både design och innehåll.</p>
                 <h3>Structure Plane</h3>
@@ -207,26 +229,38 @@
                 <h2>5. Utvärdering mot kravspecifikationen</h2>
                 <h3>Innehåll</h3>
                 <p>Webbplatsen ska:</p>
-                <ul class="req">
-                    <li>innehålla en startsida med introduktion till Nordic Calm Spa och dess atmosfär – <strong>uppfyllt</strong>. Text och bild samspelar väl och förmedlar rätt känsla.</li>
-                    <li>presentera information om behandlingar, paket och priser – <strong>uppfyllt</strong>. Webbplatsen innehåller tydliga beskrivningar och prisinformation är lätt att hitta.</li>
-                    <li>innehålla en sida/sektion riktad till företag om friskvård och personalaktiviteter – <strong>uppfyllt</strong>. En sida riktad till företag har lagts till med innehåll anpassat för denna målgrupp.</li>
-                    <li>innehålla kontaktinformation samt ett kontaktformulär – <strong>uppfyllt</strong>. Kontaktinformation finns i footer på samtliga sidor, och kontaktformuläret nås både via cta-knappar och länk i sidfoten.</li>
-                    <li>innehålla minst en bild per sida som förstärker innehållets budskap – <strong>uppfyllt</strong>. Samtliga sidor innehåller minst en bild som stödjer textens syfte.</li>
-                    <li>vara skriven på svenska och spegla en lugn, professionell och harmonisk ton – <strong>uppfyllt</strong>. All text är på svenska och har utformats för att spegla varumärkets värden och känsla.</li>
+                <ul class="check">
+                    <li>innehålla en startsida med introduktion till Nordic Calm Spa och dess atmosfär.
+                        <br>⤷ <strong>uppfyllt</strong>. Text och bild samspelar väl och förmedlar rätt känsla.</li>
+                    <li>presentera information om behandlingar, paket och priser.
+                        <br>⤷ <strong>uppfyllt</strong>. Webbplatsen innehåller tydliga beskrivningar och prisinformation är lätt att hitta.</li>
+                    <li>innehålla en sida/sektion riktad till företag om friskvård och personalaktiviteter.
+                        <br>⤷ <strong>uppfyllt</strong>. En sida riktad till företag har lagts till med innehåll anpassat för denna målgrupp.</li>
+                    <li>innehålla kontaktinformation samt ett kontaktformulär.
+                        <br>⤷ <strong>uppfyllt</strong>. Kontaktinformation finns i footer på samtliga sidor, och kontaktformuläret nås både via cta-knappar och länk i sidfoten.</li>
+                    <li>innehålla minst en bild per sida som förstärker innehållets budskap.
+                        <br>⤷ <strong>uppfyllt</strong>. Samtliga sidor innehåller minst en bild som stödjer textens syfte.</li>
+                    <li>vara skriven på svenska och spegla en lugn, professionell och harmonisk ton.
+                        <br>⤷ <strong>uppfyllt</strong>. All text är på svenska och har utformats för att spegla varumärkets värden och känsla.</li>
                 </ul>
                 <h3>Funktion</h3>
                 <p>Användaren ska:</p>
-                <ul class="req">
-                    <li>kunna navigera mellan webbplatsens sidor via en meny i sidhuvudet – <strong>uppfyllt</strong>. Navigationsmenyn är konsekvent placerad högst upp och förblir synlig även vid scrollning. De viktigaste länkarna återfinns även i footern.</li>
-                    <li>kunna klicka på knappar och länkar för att läsa mer, boka eller ta kontakt – <strong>delvis uppfyllt</strong>. Webbplatsen innehåller flera knappar och länkar till olika sidor, exempelvis behandlingar och paket samt kontaktformulär för frågor och bokning. Däremot saknas särskilda 'läs mer'-länkar.</li>
-                    <li>kunna skicka meddelande via ett kontaktformulär – <strong>uppfyllt</strong>. På sidan "Boka nu" finns ett formulär där användaren kan fylla i sina uppgifter, önskat datum, vad den vill boka och även skriva ett meddelande. Det finns även formulär för att boka hotellrum, bord på restaurangen eller en behandling.</li>
-                    <li>kunna nå kontaktsektionen direkt via en knapp i hero-området – <strong>delvis uppfyllt</strong>. De sidor som har hero-sektion innehåller en knapp som leder till sidan <em>kontakt & bokning</em>.</li>
+                <ul class="check">
+                    <li>kunna navigera mellan webbplatsens sidor via en meny i sidhuvudet.
+                        <br>⤷ <strong>uppfyllt</strong>. Navigationsmenyn är konsekvent placerad högst upp och förblir synlig även vid scrollning. De viktigaste länkarna återfinns även i footern.</li>
+                    <li>kunna klicka på knappar och länkar för att läsa mer, boka eller ta kontakt.
+                        <br>⤷ <strong>delvis uppfyllt</strong>. Webbplatsen innehåller flera knappar och länkar till olika sidor, exempelvis behandlingar och paket samt kontaktformulär för frågor och bokning. Däremot saknas särskilda 'läs mer'-länkar.</li>
+                    <li>kunna skicka meddelande via ett kontaktformulär.
+                        <br>⤷ <strong>uppfyllt</strong>. På sidan "Boka nu" finns ett formulär där användaren kan fylla i sina uppgifter, önskat datum, vad den vill boka och även skriva ett meddelande. Det finns även formulär för att boka hotellrum, bord på restaurangen eller en behandling.</li>
+                    <li>kunna nå kontaktsektionen direkt via en knapp i hero-området.
+                        <br>⤷ <strong>delvis uppfyllt</strong>. En länk till "Kontakt & FAQ" finns i footern på alla sidor.</li>
                 </ul>
                 <p>Webbplatsen ska:</p>
-                <ul class="req">
-                    <li>vara responsiv och fungera på dator, surfplatta och mobil – <strong>uppfyllt</strong>. Layouten anpassar sig väl till olika skärmstorlekar.</li>
-                    <li>ha hovring på knappar och länkar som visuellt indikerar interaktivitet – <strong>uppfyllt</strong>. Hovring ger visuella förändringar som stärker användarupplevelsen och tydliggör klickbara element.</li>
+                <ul class="check">
+                    <li>vara responsiv och fungera på dator, surfplatta och mobil.
+                        <br>⤷ <strong>uppfyllt</strong>. Layouten anpassar sig väl till olika skärmstorlekar.</li>
+                    <li>ha hovring på knappar och länkar som visuellt indikerar interaktivitet.
+                        <br>⤷ <strong>uppfyllt</strong>. Hovring ger visuella förändringar som stärker användarupplevelsen och tydliggör klickbara element.</li>
                 </ul>
                 <p>Sammanfattningsvis uppfyller webbplatsen samtliga krav som definierats i kravspecifikationen.</p>
             </section>

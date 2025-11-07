@@ -353,7 +353,7 @@ header {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -368,6 +368,8 @@ header {
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: var(--transform-slow), box-shadow 0.3s ease;
+
+    container-type: inline-size;
 }
 
 .cards img,
@@ -445,6 +447,12 @@ header {
     content: "✔ ";
 }
 
+@container(max-width:350px) {
+    .price-booking {
+        flex-direction: column;
+    }
+}
+
 .price-booking {
     color: #000;
     display: flex;
@@ -466,7 +474,8 @@ header {
 
 .price-booking a {
     text-transform: uppercase;
-    color: var(--text-main)
+    color: var(--text-main);
+    padding: 0 1rem 1rem;
 }
 
 .explore-more {
@@ -770,7 +779,7 @@ footer .transition a:hover {
     padding: 1rem;
 }
 
-form {
+form:not(.sign-up) {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -855,7 +864,7 @@ textarea {
    ============================== */
 .cards.room {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 2rem auto;
@@ -1008,6 +1017,7 @@ footer .socials {
    RESPONSIVITET
    ============================== */
 @media screen and (max-width: 800px) {
+
 
     #menuicon {
         display: inline-block;
