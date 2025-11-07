@@ -938,7 +938,6 @@ textarea {
     max-width: 1200px;
     margin: 2rem auto;
     box-shadow: var(--box-shadow);
-
 }
 
 .room-img {
@@ -964,6 +963,8 @@ textarea {
     gap: 1rem;
     justify-content: space-between;
     height: 100%;
+    margin: 0 auto;
+
 }
 
 .room-info p {
@@ -983,7 +984,7 @@ textarea {
     border-radius: 2px;
 }
 
-.fac {
+.fac, .hotel-fac {
     columns: 2;
     margin: 0;
     margin-top: 1rem;
@@ -995,11 +996,17 @@ textarea {
     margin: 0.5rem 0;
 }
 
+.hotel-fac {
+    list-style: disc;
+}
 
-.fac li {
+.fac li, .hotel-fac li {
     break-inside: avoid;
-    display: block;
     line-height: 2;
+}
+.fac li {
+    display: block;
+
 }
 
 /* ==============================
@@ -1221,7 +1228,7 @@ footer .socials {
         display: none;
     }
 
-    .fac {
+    .fac, .hotel-fac {
         columns: 1;
     }
 }
@@ -1297,7 +1304,6 @@ footer .socials {
     .btn,
     .btn-small {
         margin: 1rem 0.5rem 0;
-
     }
 
 }
