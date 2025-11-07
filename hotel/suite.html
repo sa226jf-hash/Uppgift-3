@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
-<body>
+<body id="hotel">
     <!-- ==================== NAVIGATION ==================== -->
     <header id="head">
         <nav class="main-nav">
@@ -28,11 +28,11 @@
                     <li><a href="../index.html">Hem</a></li>
                     <li><a href="../offers.html">Erbjudanden & Paket</a>
                     </li>
-                    <li><a href="spa.html">Spa & Relax</a>
+                    <li><a href="../spa/spa.html">Spa & Relax</a>
                         <ul class="local-nav-toggle">
-                            <li><a href="bath.html">Bad & Bastu</a></li>
-                            <li><a href="relax.html" class="active">Relaxavdelning</a></li>
-                            <li><a href="treatments.html">Behandlingar</a></li>
+                            <li><a href="../spa/bath.html">Bad & Bastu</a></li>
+                            <li><a href="../spa/relax.html">Relaxavdelning</a></li>
+                            <li><a href="../spa/treatments.html">Behandlingar</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -41,52 +41,70 @@
                     <img src="../img/logo.png" alt="Nordic Calm Spa logo" class="logo">
                 </a>
                 <ul class="nav-right">
-                    <li><a href="../hotel/hotel.html">Hotell</a>
+                    <li><a href="hotel.html">Hotell</a>
                     </li>
                     <li><a href="../restaurant.html">Restaurang</a></li>
                     <li><a href="../book.html">Boka nu</a></li>
                 </ul>
             </div>
-            <nav class="local-nav">
-                <ul>
-                    <li><a href="bath.html">Bad & Bastu</a></li>
-                    <li><a href="relax.html" class="active">Relaxavdelning</a></li>
-                    <li><a href="treatments.html">Behandlingar</a></li>
-                </ul>
-            </nav>
         </nav>
     </header>
 
     <!-- ==================== MAIN CONTENT ==================== -->
     <main>
-<section class="hero hero-restaurant">
-    <picture>
-        <!-- MOBILE VERSION -->
-        <source media="(max-width: 600px)" srcset="../img/card-relax.jpeg">
-        <!-- DESKTOP VERSION -->
-        <source media="(min-width: 601px)" srcset="../img/hero-relax-desktop.jpeg">
-        <!-- FALLBACK -->
-        <img src="../img/hero-relax-desktop.jpeg" alt="Ett ljust och luftigt inrett rum med bekväma stolar, växter och skira gardiner som släpper igenom naturligt dagsljus.">
-    </picture>
-    <div class="hero-text">
-        <h1>Relaxavdelning</h1>
-        <p>Vår relaxavdelning "Tystnadens rum" är inspirerad av naturens lugn – perfekt för att hitta tillbaka till balans. Släpp stressen och låt dig omslutas av värme, ljud och dofter som främjar total avslappning.</p>
-        <a href="../book.html" class="btn">Boka din vistelse</a>
-    </div>
-</section>
+        <section class="room-detail">
+                                    <div class="room-img">
+                    <img src="../img/card-suite.jpeg" alt="Ett hotellrum utifrån sett med nordiska träd i förgrunden. I bakgrunden, innanför glasväggar syns ett badkar och en säng.">
+            </div>
+            <h2>Suite</h2>
+            <p>Vår mest exklusiva upplevelse – generösa ytor, jacuzzi på rummet och privat bastu med panoramavy över vattnet. En upplevelse utöver det vanliga, för dig som söker fullständig avkoppling och avskildhet.</p>
 
+            <div class="room-info">
+                <ul>
+                    <li><strong>Rumsstorlek:</strong> 70 m&sup2;</li>
+                    <li><strong>Incheckning:</strong> 15:00</li>
+                    <li><strong>Utcheckning:</strong> 11:00</li>
+                    <li><strong>Sängstorlek:</strong> 200 cm</li>
+                    <li><strong>Max antal personer:</strong> 4</li>
+                    <li><strong>Extra säng/mindre sängar:</strong> 2</li>
+                </ul>
+            </div>
+            <div class="facilities">
+                <ul>
+                    <li>Jacuzzi på rummet</li>
+                    <li>Privat bastu</li>
+                    <li>Sjöutsikt</li>
+                    <li>2 st smart-TV</li>
+                    <li>Nespressomaskin</li>
+                    <li>Egen uteplats</li>
+                    <li>Badkar</li>
+                    <li>Dusch</li>
+                    <li>Förvaringsbox</li>
+                    <li>Soffa</li>
+                    <li>Garderob</li>
+                    <li>Skrivbord</li>
+                    <li>Strykjärn & Strykbräda</li>
+                    <li>Hårfön</li>
+                    <li>Badrock</li>
+                    <li>Tofflor</li>
+                    <li>Minibar</li>
+                    <li>Gratis WiFi</li>
+                    <li>Alla gäster har tillgång till spa, gym och relaxavdelnig under sin vistelse.</li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <!-- ==================== FOOTER ==================== -->
-       <footer>
+    <footer>
         <div class="footer-content">
             <div class="footer-navigation">
                 <h3>Snabblänkar</h3>
                 <ul class="footer-nav">
                     <li><a href="../index.html">Hem</a></li>
                     <li><a href="../offers.html">Erbjudanden / Paket</a></li>
-                    <li><a href="spa.html">Spa & Relax</a></li>
-                    <li><a href="../hotel/hotel.html">Hotell</a></li>
+                    <li><a href="../spa/spa.html">Spa & Relax</a></li>
+                    <li><a href="hotel.html">Hotell</a></li>
                     <li><a href="../restaurant.html">Restaurang</a></li>
                     <li><a href="../book.html">Boka nu</a></li>
                     <li><a href="../contact.html">Kontakt & FAQ</a></li>
@@ -98,15 +116,15 @@
                 <p>E-post: info@nordiccalmspa.se</p>
                 <p>Adress: Tallgläntan 3, 791 92 Falun</p>
                 <div class="socials">
-                <a href="https://www.facebook.com" target="_blank">
-                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com" target="_blank">
-                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.linkedin.com" target="_blank">
-                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-                </a>
-            </div>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                </div>
                 <p><strong>Öppettider</strong></p>
                 <p>Hotell/reception: 06:00–00:00</p>
                 <p>Spa & Relax: 07:00–22:00</p>
@@ -124,12 +142,12 @@
             </div>
         </div>
         <div class="footer-end">
-        © 2025 Nordic Calm Spa
-    </div>
+            © 2025 Nordic Calm Spa
+        </div>
         <div class="transition">
             <a href="../rapport/rapport.html" target="_blank">Projektrapport</a>
-      
-    </div>
+
+        </div>
     </footer>
 </body>
 

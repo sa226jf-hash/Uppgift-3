@@ -9,8 +9,8 @@
     --bg-dark: #838377;
     --bg-accent: #ddd7d0;
     --bg-transparent: rgba(159, 157, 150, 0.5);
+    --bg-transparent-dark: rgba(0, 0, 0, 0.5);
 
-    /* --accent-green: #4c5042; */
     --accent-green: #3b3e33;
     --accent-green-dark: #21221d;
     --accent-dark: #5a554e;
@@ -68,6 +68,8 @@ h2,
 h3,
 dt {
     font-family: var(--heading);
+    margin: 0 auto 1rem;
+    display: block;
 }
 
 h1 {
@@ -112,7 +114,7 @@ dd,
     color: var(--accent-green-dark);
     font-style: italic;
     text-align: center;
-    margin: 0 auto 2rem;
+    margin: clamp(1rem, 2vw, 2rem) auto 0;
 }
 
 ul {
@@ -332,9 +334,13 @@ header {
 
 .intro {
     background-color: var(--bg-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin: 0 auto;
-    padding: 3rem 1rem 5rem;
+    min-height: clamp(150px, 25vh, 300px);
+    padding: clamp(2rem, 3vw, 4rem);
 }
 
 .intro p {
@@ -344,7 +350,10 @@ header {
 
 .highlights {
     background: var(--bg-accent);
-    padding: 2rem 1rem;
+    justify-content: center;
+    align-items: center;
+    min-height: clamp(150px, 25vh, 300px);
+    padding: clamp(2rem, 3vw, 4rem);
 }
 
 .highlights p {
@@ -356,8 +365,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+    margin: 2rem auto;
 }
 
 .cards article {
@@ -368,7 +376,6 @@ header {
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: var(--transform-slow), box-shadow 0.3s ease;
-
     container-type: inline-size;
 }
 
@@ -379,7 +386,7 @@ header {
     object-fit: cover;
 }
 
-.cards article:hover,
+.cards article:hover:not(.stay.highlights article, .day.highlights article),
 .explore-more article:hover {
     will-change: transform;
     transform: var(--scale-medium);
@@ -401,7 +408,8 @@ header {
     padding: 0 1rem 1rem;
 }
 
-.img-wrapper {
+.img-wrapper,
+.img-wrapper-day {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -426,15 +434,21 @@ header {
     text-shadow: var(--text-shadow);
 }
 
-.stamp {
+.stamp-left,
+.stamp-right {
     position: absolute;
     display: flex;
     flex-direction: column;
-    left: 0;
-    top: 0;
     margin: 1rem;
     z-index: 2;
-    max-width: 100px;
+    top: 0;
+    max-width: clamp(65px, 8vw, 80px);
+}
+.stamp-left {
+    left: 0;
+}
+.stamp-right {
+    right: 0;
 }
 
 .cards article .text-overlay h3,
@@ -519,10 +533,15 @@ header {
    CTA
    ============================== */
 .cta {
-    text-align: center;
-    padding: 3rem 1rem;
     background: var(--bg-dark);
     color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: clamp(250px, 40vh, 500px);
+    padding: clamp(1rem, 2vw, 2rem);
 }
 
 /* ==============================
@@ -627,35 +646,69 @@ footer .transition a:hover {
 /* ==============================
    SPA / RELAX
    ============================== */
-.spa-section {
-    padding: 2rem 0 4rem;
-    background: var(--bg-light);
-    margin: 0 auto;
-    align-content: center;
+
+.bath-highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2rem, 3vw, 4rem);
 }
 
-.spa-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+.bath-category {
+    position: relative;
+    width: 100%;
     max-width: 1200px;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transform-medium);
+    min-height: 400px;
+    align-content: center;
+
+}
+
+.bath-category::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg-transparent-dark);
+    z-index: 1;
+}
+
+.bath-category-text {
+    position: relative;
+    z-index: 2;
+    padding: clamp(2rem, 3vw, 3rem);
+    text-align: center;
+    color: var(--white);
+    text-shadow: var(--text-shadow);
+    width: 90%;
     margin: 0 auto;
 }
 
-.pool,
-.sauna {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(8px);
-    border-radius: 1rem;
-    padding: 2rem 1.5rem;
-    box-shadow: var(--box-shadow);
-    transition: var(--transform-slow);
+.bath-category h2 {
+    margin: 0 auto 1rem;
 }
 
-.pool:hover,
-.sauna:hover {
+#bath-hot {
+    background: url(../img/bg-bath-hot-desktop.jpeg) no-repeat center/cover;
+}
+
+#bath-cold {
+    background: url(../img/bg-bath-cold-desktop.jpeg) no-repeat center/cover;
+}
+
+#bath-out {
+    background: url(../img/bg-bath-out-desktop.jpeg) no-repeat center/cover;
+}
+
+.bath-category:hover {
     will-change: transform;
     transform: var(--scale-medium);
+    box-shadow: var(--box-shadow-hover);
+
 }
 
 .ritual-wrapper {
@@ -663,9 +716,8 @@ footer .transition a:hover {
     margin: 0 auto;
 }
 
-#ritual,
-#outdoor,
-#shower {
+#ritual {
+    background-color: var(--bg-dark);
     text-align: center;
     padding: 4rem;
 }
@@ -774,7 +826,7 @@ footer .transition a:hover {
     background-color: var(--bg-transparent);
     backdrop-filter: blur(10px);
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     margin: 2rem auto;
     padding: 1rem;
 }
@@ -792,6 +844,7 @@ textarea,
 option {
     background: rgba(255, 255, 255, 0.6);
     border: none;
+    padding: 0.5rem;
 }
 
 textarea {
@@ -799,7 +852,8 @@ textarea {
 }
 
 .package.form-section,
-.treatment.form-section {
+.treatment.form-section,
+.extra.form-section {
     display: none;
     margin: 2rem 0 0;
 }
@@ -807,7 +861,8 @@ textarea {
 #radio-treatment:checked~.treatment,
 #radio-treatment:checked~.date,
 #radio-package:checked~.package,
-#radio-package:checked~.date {
+#radio-package:checked~.date,
+#radio-extra:checked~.extra {
     display: block;
 }
 
@@ -816,7 +871,7 @@ textarea {
 .date-time,
 .guest-details {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
@@ -872,7 +927,9 @@ textarea {
     text-wrap: balance;
 }
 
-
+.room-detail {
+    
+}
 
 /* ==============================
    MENU PAGE
@@ -907,8 +964,7 @@ textarea {
     background-color: var(--accent-dark);
 }
 
-.menu dt,
-.intro p {
+.menu dt {
     margin: 2rem auto;
 }
 
@@ -1149,6 +1205,24 @@ footer .socials {
 
     .contact-form {
         background: url(img/card-contact.jpeg) no-repeat center/cover;
+    }
+
+    #bath-hot {
+        background: url(../img/card-bath-hot.jpeg) no-repeat center/cover;
+    }
+
+    #bath-cold {
+        background: url(../img/card-bath-cold.jpeg) no-repeat center/cover;
+    }
+
+    #bath-out {
+        background: url(../img/card-bath-out.jpeg) no-repeat center/cover;
+    }
+
+    .btn,
+    .btn-small {
+        margin: 1rem 0.5rem 0;
+
     }
 
 }
