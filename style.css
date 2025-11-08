@@ -156,6 +156,7 @@ a {
 
 a:hover:not(.btn:hover):not(.btn-small:hover) {
     color: var(--accent-green);
+    text-decoration: underline;
 }
 
 a.active {
@@ -675,13 +676,6 @@ footer .transition a:hover {
 /* ==============================
    SPA / RELAX
    ============================== */
-
-@container(max-width:780px) {
-    .spa-intro {
-        text-align: center;
-    }
-}
-
 .intro-spa {
     container-type: inline-size;
 }
@@ -694,6 +688,13 @@ footer .transition a:hover {
     max-width: 1200px;
     margin: 2rem auto;
     padding: clamp(2rem, 3vw, 4rem);
+}
+
+@container(max-width:780px) {
+    .spa-intro,
+    .restaurant-intro {
+        text-align: center;
+    }
 }
 
 .bath-highlights {
