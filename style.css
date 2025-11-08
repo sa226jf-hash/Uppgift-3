@@ -1381,6 +1381,11 @@ footer .socials {
         margin: 0 auto;
     }
 
+   a.logo-link-small
+     {
+        display: block;
+    }
+
     .logo-small {
         max-width: 40px;
     }
