@@ -658,6 +658,19 @@ footer .transition a:hover {
    SPA / RELAX
    ============================== */
 
+.spa-intro {
+        display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.spa-wrapper, .ritual-wrapper {
+    align-content: center;
+    justify-content: center;
+}
+
 .bath-highlights {
     display: flex;
     flex-direction: column;
@@ -677,7 +690,6 @@ footer .transition a:hover {
     transition: var(--transform-medium);
     min-height: 400px;
     align-content: center;
-
 }
 
 .bath-category::before {
