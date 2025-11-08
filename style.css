@@ -401,7 +401,6 @@ header {
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: var(--transform-slow), box-shadow 0.3s ease;
-    container-type: inline-size;
 }
 
 .cards img,
@@ -489,12 +488,6 @@ header {
 
 .including li::before {
     content: "✔ ";
-}
-
-@container(max-width:350px) {
-    .price-booking {
-        flex-direction: column;
-    }
 }
 
 .price-booking {
@@ -681,9 +674,6 @@ footer .transition a:hover {
 /* ==============================
    SPA / RELAX
    ============================== */
-.intro-spa {
-    container-type: inline-size;
-}
 
 .spa-intro,
 .restaurant-intro {
@@ -693,13 +683,6 @@ footer .transition a:hover {
     max-width: 1200px;
     margin: 2rem auto;
     padding: clamp(2rem, 3vw, 4rem);
-}
-
-@container(max-width:780px) {
-    .spa-intro,
-    .restaurant-intro {
-        text-align: center;
-    }
 }
 
 .bath-highlights {
@@ -1250,8 +1233,6 @@ footer .socials {
    RESPONSIVITET
    ============================== */
 @media screen and (max-width: 800px) {
-
-
     #menuicon {
         display: inline-block;
         cursor: pointer;
@@ -1322,6 +1303,13 @@ footer .socials {
     .fac,
     .hotel-fac {
         columns: 1;
+    }
+}
+
+@media screen and (max-width:780px) {
+    .spa-intro,
+    .restaurant-intro {
+        text-align: center;
     }
 }
 
@@ -1404,4 +1392,10 @@ footer .socials {
         margin: 2rem auto;
     }
 
+}
+
+@media screen and (max-width:380px) {
+    .price-booking {
+        flex-direction: column;
+    }
 }
