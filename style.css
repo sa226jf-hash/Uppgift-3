@@ -1284,7 +1284,8 @@ footer .socials {
         flex-direction: column;
     }
 
-    #menucheckbox:checked~.local-nav-mobile {
+    #menucheckbox:checked~.local-nav-mobile, #menucheckbox:checked~a.logo-link-small
+     {
         display: none;
     }
 
