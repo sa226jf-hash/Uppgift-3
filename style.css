@@ -333,6 +333,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: -1;
@@ -423,6 +424,7 @@ header {
 .explore-more img {
     display: block;
     width: 100%;
+    max-width: 100%;
     object-fit: cover;
 }
 
@@ -552,6 +554,8 @@ header {
 .explore-more img {
     width: 50%;
     border-radius: 1rem;
+    max-width: 100%;
+
 }
 
 .card.left-img article {
@@ -786,10 +790,7 @@ footer .transition a:hover {
     margin: 2rem auto;
     text-align: center;
     text-wrap: balance;
-}
 
-.hotel-room {
-    margin: 0 auto;
 }
 
 .room-detail,
@@ -959,7 +960,6 @@ footer .transition a:hover {
 
 .restaurant-intro {
     text-align: left;
-    margin-left: 0;
 }
 
 .info-wrapper ul {
@@ -1145,6 +1145,12 @@ textarea {
     padding-bottom: 2rem;
 }
 
+.menu.links,
+.drink-menu-link {
+    margin: 1rem auto;
+    display: block;
+}
+
 .course:not(:first-of-type),
 .category:not(:first-of-type) {
     border-top: 1px solid var(--accent-dark);
@@ -1278,8 +1284,8 @@ footer .socials {
         flex-direction: column;
     }
 
-    #menucheckbox:checked ~.local-nav-mobile {
-        display:none;
+    #menucheckbox:checked~.local-nav-mobile {
+        display: none;
     }
 
     header {
@@ -1295,16 +1301,16 @@ footer .socials {
         flex-direction: column;
         margin: 2rem 0.3rem 1rem;
     }
-    
+
     .main-nav {
         margin: 0;
         padding: 0;
     }
-    
+
     .main-nav ul {
         gap: 0.5rem;
     }
-    
+
     .nav-left,
     .main-nav ul ul,
     .nav-right {
@@ -1368,6 +1374,7 @@ footer .socials {
     .logo-link-small {
         margin: 0 auto;
     }
+
     .logo-small {
         max-width: 40px;
     }
@@ -1411,10 +1418,6 @@ footer .socials {
         padding: 1rem;
     }
 
-    .explore-more img,
-    .explore-more-text {
-        width: 100%;
-    }
 
     .footer-content,
     .footer-end {
@@ -1465,9 +1468,8 @@ footer .socials {
         margin: 2rem auto;
     }
 
-    .phone {
-        max-width: 80%;
-        margin: 0 auto;
+    .cards.room {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 
 }
@@ -1476,4 +1478,5 @@ footer .socials {
     .price-booking {
         flex-direction: column;
     }
+
 }
