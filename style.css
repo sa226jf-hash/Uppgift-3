@@ -990,14 +990,16 @@ footer .transition a:hover {
     max-width: 800px;
     margin: 2rem auto;
     padding: 1rem;
-} 
+}
 
 .contact h2 {
     margin: 0;
 }
+
 .contact ul {
     margin: 2rem 0 3rem;
 }
+
 form:not(.sign-up) {
     display: flex;
     flex-direction: column;
@@ -1307,6 +1309,7 @@ footer .socials {
 }
 
 @media screen and (max-width:780px) {
+
     .spa-intro,
     .restaurant-intro {
         text-align: center;
