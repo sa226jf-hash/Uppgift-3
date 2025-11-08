@@ -259,6 +259,11 @@ header {
     margin: 0 clamp(1.5rem, 2vw, 4rem);
 }
 
+a.logo-link-small
+     {
+        display: none;
+    }
+
 #menuicon {
     display: none;
     position: absolute;
