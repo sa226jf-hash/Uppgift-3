@@ -60,6 +60,7 @@ body {
     margin: 0;
 }
 
+
 :focus {
     outline: 0.3rem solid var(--accent-dark);
 }
@@ -84,6 +85,7 @@ h2 {
     font-size: clamp(1.6rem, 2vw, 3rem);
     letter-spacing: 0.05rem;
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 h2::after {
@@ -94,6 +96,23 @@ h2::after {
     background-color: var(--accent-dark);
     margin: 0 auto;
     border-radius: 2px;
+}
+
+h2.left {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    margin: 0;
+}
+
+h2.left::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 1px;
+    background-color: var(--accent-dark);
+    border-radius: 2px;
+    margin: 0 auto 2rem;
 }
 
 h3,
@@ -118,7 +137,7 @@ dd,
     color: var(--accent-green-dark);
     font-style: italic;
     text-align: center;
-    margin: clamp(1rem, 2vw, 2rem) auto 0;
+    margin: clamp(0.8rem, 1vw, 1.5rem) auto;
 }
 
 ul {
@@ -171,6 +190,7 @@ a.active {
     will-change: transform;
     transform: var(--scale-medium);
     background: var(--accent-dark);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .btn-clean {
@@ -390,13 +410,11 @@ header {
     object-fit: cover;
 }
 
-/* .cards article:hover:not(.stay.highlights article, .day.highlights article), */
 .index.cards article:hover,
 .explore-more article:hover,
 .popular.cards article:hover,
 .offers.cards article:hover,
-.room.cards article:hover
-{
+.room.cards article:hover {
     will-change: transform;
     transform: var(--scale-medium);
     box-shadow: var(--box-shadow-hover);
@@ -658,17 +676,24 @@ footer .transition a:hover {
    SPA / RELAX
    ============================== */
 
-.spa-intro {
-        display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 2rem auto;
+@container(max-width:780px) {
+    .spa-intro {
+        text-align: center;
+    }
 }
 
-.spa-wrapper, .ritual-wrapper {
-    align-content: center;
-    justify-content: center;
+.intro-spa {
+    container-type: inline-size;
+}
+
+.spa-intro,
+.restaurant-intro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: clamp(2rem, 3vw, 4rem);
 }
 
 .bath-highlights {
@@ -711,10 +736,6 @@ footer .transition a:hover {
     margin: 0 auto;
 }
 
-.bath-category h2 {
-    margin: 0 auto 1rem;
-}
-
 #bath-hot {
     background: url(../img/bg-bath-hot-desktop.jpeg) no-repeat center/cover;
 }
@@ -731,7 +752,6 @@ footer .transition a:hover {
     will-change: transform;
     transform: var(--scale-medium);
     box-shadow: var(--box-shadow-hover);
-
 }
 
 .ritual-wrapper {
@@ -744,6 +764,115 @@ footer .transition a:hover {
     text-align: center;
     padding: 4rem;
 }
+
+/* ==============================
+   HOTELL & RESTAURANG
+   ============================== */
+.cards.room {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.hotel-room {
+    margin: 0 auto;
+}
+
+.room-detail,
+.hotel-detail {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+    padding: clamp(1rem, 2.5vw, 2rem);
+    max-width: 1200px;
+    margin: 2rem 1rem;
+    box-shadow: var(--box-shadow);
+    box-sizing: border-box;
+}
+
+.room-img {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.room-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+.room-info,
+.hotel-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.room-info p {
+    text-align: center;
+}
+
+#hotel-room h2 {
+    margin-bottom: 0;
+}
+
+.room-info h3 {
+    text-align: left;
+    margin: 0;
+}
+
+.room-info h3::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--bg-accent);
+    border-radius: 2px;
+}
+
+.fac,
+.hotel-fac {
+    columns: 2;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+    column-gap: 2rem;
+}
+
+.room-info ul {
+    margin: 0.5rem 0;
+}
+
+.hotel-fac {
+    list-style: disc inside;
+
+}
+
+.fac li,
+.hotel-fac li {
+    break-inside: avoid;
+    line-height: 2;
+}
+
+.fac li {
+    display: block;
+}
+
 
 
 /* ==============================
@@ -805,8 +934,19 @@ footer .transition a:hover {
     max-height: 200px;
 }
 
-.faq details a {
+.faq details a,
+.info-wrapper a {
     text-decoration: underline;
+}
+
+.restaurant-intro {
+    text-align: left;
+    margin-left: 0;
+}
+
+.info-wrapper ul {
+    text-align: left;
+    line-height: 2;
 }
 
 /* ==============================
@@ -882,9 +1022,7 @@ textarea {
 }
 
 #radio-treatment:checked~.treatment,
-#radio-treatment:checked~.date,
 #radio-package:checked~.package,
-#radio-package:checked~.date,
 #radio-extra:checked~.extra {
     display: block;
 }
@@ -914,7 +1052,6 @@ textarea {
 
 .date,
 .time,
-.treatment,
 .room,
 .message,
 .contact-message {
@@ -937,98 +1074,6 @@ textarea {
     margin: 0;
 }
 
-/* ==============================
-   HOTELL
-   ============================== */
-.cards.room {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
-    text-align: center;
-    text-wrap: balance;
-}
-
-.room-detail, .hotel-detail {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
-    align-items: stretch;
-    padding: clamp(1rem, 2.5vw, 2rem);
-    max-width: 1200px;
-    margin: 2rem auto;
-    box-shadow: var(--box-shadow);
-}
-
-.room-img {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.room-img img {
-    display: block;
-    height: 100%;
-    max-height: 80vh;
-    object-fit: cover;
-    object-position: center;
-}
-
-.room-info, .hotel-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: space-between;
-    height: 100%;
-    margin: 0 auto;
-
-}
-
-.room-info p {
-    text-align: center;
-}
-
-.room-info h3 {
-    text-align: left;
-    margin: 0;
-}
-.room-info h3::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: var(--bg-accent);
-    border-radius: 2px;
-}
-
-.fac, .hotel-fac {
-    columns: 2;
-    margin: 0;
-    margin-top: 1rem;
-    padding: 0;
-    column-gap: 2rem;
-}
-
-.room-info ul {
-    margin: 0.5rem 0;
-}
-
-.hotel-fac {
-    list-style: disc;
-}
-
-.fac li, .hotel-fac li {
-    break-inside: avoid;
-    line-height: 2;
-}
-.fac li {
-    display: block;
-
-}
 
 /* ==============================
    MENU PAGE
@@ -1153,6 +1198,7 @@ footer .socials {
 .footer-info {
     margin-bottom: 1rem;
 }
+
 .sign-up {
     display: flex;
     align-items: stretch;
@@ -1245,13 +1291,14 @@ footer .socials {
     }
 
     .logo {
-        position:absolute;
+        position: absolute;
         top: 0;
         left: 50%;
         z-index: 10;
     }
 
-    .fac, .hotel-fac {
+    .fac,
+    .hotel-fac {
         columns: 1;
     }
 }
@@ -1327,6 +1374,12 @@ footer .socials {
     .btn,
     .btn-small:not(.sign-up .btn-small) {
         margin: 1rem 0.5rem 0;
+    }
+
+    .room-detail,
+    .hotel-detail {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        margin: 2rem auto;
     }
 
 }
