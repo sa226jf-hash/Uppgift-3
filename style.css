@@ -85,7 +85,6 @@ h2 {
     font-size: clamp(1.6rem, 2vw, 3rem);
     letter-spacing: 0.05rem;
     text-align: center;
-    margin-bottom: 3rem;
 }
 
 h2::after {
@@ -138,6 +137,7 @@ dd,
     font-style: italic;
     text-align: center;
     margin: clamp(0.8rem, 1vw, 1.5rem) auto;
+    max-width: 400px;
 }
 
 ul {
@@ -535,6 +535,7 @@ header {
     display: flex;
     align-items: center;
     gap: 2rem;
+    margin: 2rem auto 0;
     padding: 2rem;
     border-radius: 1rem;
 }
@@ -898,6 +899,13 @@ footer .transition a:hover {
     box-shadow: var(--box-shadow);
 }
 
+.faq h3 {
+    margin: 3rem 1rem 0;
+    text-transform: uppercase;
+    font-family: var(--text-main);
+    font-weight: 400;
+}
+
 .faq details {
     border-bottom: 1px solid var(--accent-green);
     padding: 1rem 0;
@@ -909,6 +917,7 @@ footer .transition a:hover {
     font-weight: 600;
     position: relative;
     list-style: none;
+    padding: 0 2rem 0 0.5rem;
 }
 
 .faq summary::after {
@@ -917,6 +926,7 @@ footer .transition a:hover {
     content: '+';
     position: absolute;
     right: 0;
+    top: 0;
     transition: var(--transform-medium);
 }
 
@@ -940,7 +950,8 @@ footer .transition a:hover {
 }
 
 .faq details a,
-.info-wrapper a {
+.info-wrapper a,
+.contact a {
     text-decoration: underline;
 }
 
@@ -964,7 +975,6 @@ footer .transition a:hover {
 .book-form,
 .contact-form {
     padding: 2rem;
-
 }
 
 .treatment-form {
@@ -997,8 +1007,14 @@ footer .transition a:hover {
     max-width: 800px;
     margin: 2rem auto;
     padding: 1rem;
-}
+} 
 
+.contact h2 {
+    margin: 0;
+}
+.contact ul {
+    margin: 2rem 0 3rem;
+}
 form:not(.sign-up) {
     display: flex;
     flex-direction: column;
@@ -1188,12 +1204,20 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
+.footer-content h3 {
+    margin: 0.5rem 0;
+}
+
 footer a {
     color: var(--accent-green);
 }
 
 footer a:hover {
     color: var(--text-muted);
+}
+
+footer ul {
+    margin: 0;
 }
 
 footer .socials {
