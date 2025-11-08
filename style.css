@@ -902,7 +902,7 @@ footer .transition a:hover {
 .faq h3 {
     margin: 3rem 1rem 0;
     text-transform: uppercase;
-    font-family: var(--text-main);
+    font-family: var(--font);
     font-weight: 400;
 }
 
@@ -1317,13 +1317,6 @@ footer .socials {
 
     .local-nav-toggle a.active {
         text-decoration: underline;
-    }
-
-    .logo {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        z-index: 10;
     }
 
     .fac,
