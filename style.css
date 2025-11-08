@@ -60,6 +60,10 @@ body {
     margin: 0;
 }
 
+:focus {
+    outline: 0.3rem solid var(--accent-dark);
+}
+
 /* ==============================
    TYPOGRAFI
    ============================== */
@@ -132,7 +136,7 @@ a {
 }
 
 a:hover:not(.btn:hover):not(.btn-small:hover) {
-    color: var(--accent-dark);
+    color: var(--accent-green);
 }
 
 a.active {
@@ -353,7 +357,7 @@ header {
     justify-content: center;
     align-items: center;
     min-height: clamp(150px, 25vh, 300px);
-    padding: clamp(2rem, 3vw, 4rem);
+    padding: clamp(3rem, 4.5vw, 6rem) clamp(2rem, 3vw, 4rem);
 }
 
 .highlights p {
@@ -386,8 +390,13 @@ header {
     object-fit: cover;
 }
 
-.cards article:hover:not(.stay.highlights article, .day.highlights article),
-.explore-more article:hover {
+/* .cards article:hover:not(.stay.highlights article, .day.highlights article), */
+.index.cards article:hover,
+.explore-more article:hover,
+.popular.cards article:hover,
+.offers.cards article:hover,
+.room.cards article:hover
+{
     will-change: transform;
     transform: var(--scale-medium);
     box-shadow: var(--box-shadow-hover);
@@ -1129,6 +1138,9 @@ footer .socials {
     margin: 0.5rem 0 1rem;
 }
 
+.footer-info {
+    margin-bottom: 1rem;
+}
 .sign-up {
     display: flex;
     align-items: stretch;
@@ -1158,10 +1170,6 @@ footer .socials {
         cursor: pointer;
         font-size: 1.5rem;
         z-index: 20;
-    }
-
-    #menuicon:focus {
-        outline: 2px solid var(--accent-dark);
     }
 
     #menuicon .fa-close {
@@ -1224,8 +1232,11 @@ footer .socials {
         text-decoration: underline;
     }
 
-    .logo-link {
-        display: none;
+    .logo {
+        position:absolute;
+        top: 0;
+        left: 50%;
+        z-index: 10;
     }
 
     .fac, .hotel-fac {
@@ -1302,7 +1313,7 @@ footer .socials {
     }
 
     .btn,
-    .btn-small {
+    .btn-small:not(.sign-up .btn-small) {
         margin: 1rem 0.5rem 0;
     }
 
