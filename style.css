@@ -214,6 +214,7 @@ a.active {
    NAVIGATION
    ============================== */
 header {
+    display: flex;
     background: var(--bg-light);
     box-shadow: var(--box-shadow);
     position: sticky;
@@ -228,6 +229,7 @@ header {
     flex-direction: column;
     align-items: center;
     text-transform: uppercase;
+    margin: 0 auto;
 }
 
 .nav-wrapper {
@@ -278,8 +280,9 @@ header {
     justify-content: space-between;
 }
 
+
 .local-nav a {
-        color: var(--accent-dark);
+    color: var(--accent-dark);
 }
 
 .local-nav::before {
@@ -299,11 +302,15 @@ header {
     gap: 1rem;
     padding: 0.5rem 0;
     margin: 0 auto;
-        font-size: clamp(0.6rem, 1vw, 0.8rem); 
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
 }
 
-.offers.local-nav a{
+.offers.local-nav a {
     text-transform: none;
+}
+
+.local-nav-mobile {
+    display: none;
 }
 
 /* ==============================
@@ -565,7 +572,8 @@ header {
 /* ==============================
    CTA
    ============================== */
-.cta, .treatment-transition {
+.cta,
+.treatment-transition {
     background: var(--bg-dark);
     color: var(--white);
     display: flex;
@@ -1270,6 +1278,14 @@ footer .socials {
         flex-direction: column;
     }
 
+    #menucheckbox:checked ~.local-nav-mobile {
+        display:none;
+    }
+
+    header {
+        justify-content: center;
+    }
+
     .nav-wrapper,
     .local-nav {
         display: none;
@@ -1277,17 +1293,18 @@ footer .socials {
 
     .nav-wrapper {
         flex-direction: column;
-        margin: 3rem 1.3rem 1rem;
+        margin: 2rem 0.3rem 1rem;
     }
-
+    
     .main-nav {
-        align-items: flex-start;
+        margin: 0;
+        padding: 0;
     }
-
+    
     .main-nav ul {
         gap: 0.5rem;
     }
-
+    
     .nav-left,
     .main-nav ul ul,
     .nav-right {
@@ -1311,6 +1328,48 @@ footer .socials {
 
     .local-nav-toggle a.active {
         text-decoration: underline;
+    }
+
+    .local-nav-mobile {
+        background-color: var(--bg-light);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-content: center;
+        text-transform: none;
+    }
+
+    .local-nav-mobile ul {
+        display: flex;
+        margin: 0 auto;
+        padding: 0.3rem 0 0.2rem;
+        gap: 0.4rem;
+        align-items: center;
+    }
+
+    .local-nav-mobile ul::before {
+        content: '';
+        background-color: var(--bg-medium);
+        height: 1px;
+        position: absolute;
+        top: 2.5rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .local-nav-mobile ul li a {
+        font-size: 0.75rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo-link-small {
+        margin: 0 auto;
+    }
+    .logo-small {
+        max-width: 40px;
     }
 
     .fac,
