@@ -574,7 +574,7 @@ a.logo-link-small
 
 .explore-more-text {
     flex-direction: column;
-    width: 50%;
+    max-width: 100%;
 }
 
 
