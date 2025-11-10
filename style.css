@@ -425,7 +425,7 @@ a.logo-link-small
     transition: var(--transform-slow), box-shadow 0.3s ease;
 }
 
-.cards img,
+.cards img:not(.stamp-left, .stamp-right),
 .explore-more img {
     display: block;
     width: 100%;
@@ -557,7 +557,7 @@ a.logo-link-small
 }
 
 .explore-more img {
-    width: 50%;
+    width: 100%;
     border-radius: 1rem;
     max-width: 100%;
 
