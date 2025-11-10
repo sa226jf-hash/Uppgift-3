@@ -620,7 +620,7 @@ footer .transition {
 
 .transition p,
 footer .transition a {
-    font-size: clamp(1.2rem, 1.5vw, 2rem);
+    font-size: clamp(0.8rem, 2vw, 2rem);
     transition: var(--transform-medium);
 }
 
